@@ -1,0 +1,60 @@
+{
+	"discerptorEviscerus": {
+		"baseSize": 40,
+		"name": "Discerptor Eviscerus",
+		"type": "warcaster",
+		"advantages": [
+			"pathfinder",
+			"undead"
+		],
+		"faction": "Necrofactorium",
+		"keywords": "cryx,necrofactorium,scout,warcaster",
+		"statistics": {
+			"arcana": 7,
+			"arcaneAttack": 7,
+			"armour": 16,
+			"controlRange": 14,
+			"defense": 14,
+			"health": 17,
+			"speed": 6,
+			"meleeAttack": 6
+		},
+		"abilities": [
+			"fieldMarshal[retaliatoryStrike]",
+			"chopShop",
+			"repairable",
+			"repair",
+			"steady"
+		],
+		"weapons": {
+			"bonePicker": {
+				"name": "Bone Picker",
+				"type": "melee",
+				"qualities": [
+					"magicWeapon"
+				],
+				"statistics": {
+					"range": 1,
+					"power": 12
+				},
+				"abilities": {
+					"erosion": {
+						"name": "Erosion",
+						"rules": "This model gains an {additional die} on this weapon's damage rolls against {construct} models."
+					}
+				}
+			}
+		},
+		"feat": {
+			"boneyard": {
+				"name": "Boneyard",
+				"rules": "Large and smaller-based models in Eviscerus' battlegroup currently in his control range gain {Dig In}. An affected model that begins its activation dug in as a result of Boneyard gains +2 SPD and a focus point that activation. (A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.)"
+			}
+		},
+		"spells": [
+			"carrionFeast",
+			"deceleration",
+			"redline"
+		]
+	}
+}

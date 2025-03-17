@@ -1,0 +1,28 @@
+{
+	"chopShop": {
+		"type": "passive",
+		"name": "Chop Shop",
+		"rules": "When a model in this model's {battlegroup} destroyed an enemy {construct} model with a {melee attack}, remove d3 + 1 damage points from model in this model's {battlegroup} currently in its {control range} and remove the destroyed model from play."
+	},
+	"fieldMarshal[retaliatoryStrike]": {
+		"type": "passive",
+		"name": "Field Marshal [Retaliatory Strike]",
+		"rules": "{Cohort} models in this model's {battlegroup} gain {Retaliatory Strike}."
+	},
+	"repair": {
+		"type": "action",
+		"name": "Repair",
+		"rules": "Target friendly Faction {construct} model. If the model is in range, remove d3 + 1 damage points from it.",
+		"range": 1
+	},
+	"repairable": {
+		"type": "passive",
+		"name": "Repairable",
+		"rules": "This model can be targeted with {Repair} special actions as if it were a {construct} model."
+	},
+	"steady": {
+		"type": "passive",
+		"name": "Steady",
+		"rules": "This model cannot become {knocked down}."
+	}
+}
