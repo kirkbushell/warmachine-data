@@ -5,7 +5,7 @@
 	"description": "A repository of data pertaining to the Warmachine tabletop game. Usable and freely available to all community projects.",
 	"main": "index.js",
 	"scripts": {
-		"validate": "npm run validate"
+		"data": "npx tsx src/data.ts"
 	},
 	"author": "Kirk Bushell",
 	"license": "MIT",
