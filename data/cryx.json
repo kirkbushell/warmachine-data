@@ -410,5 +410,170 @@
 				"type": "melee"
 			}
 		}
+	},
+	"raptor": {
+		"abilities": [
+			"dodge"
+		],
+		"advantages": [
+			"construct",
+			"headbuttPowerAttack",
+			"pathfinder",
+			"slamPowerAttack"
+		],
+		"baseSize": 40,
+		"faction": "necrofactorium",
+		"fieldAllowance": 6,
+		"keywords": [
+			"cryx",
+			"necrofactorium",
+			"light",
+			"warjack"
+		],
+		"name": "Raptor",
+		"options": {
+			"back": {
+				"arcNode": {
+					"advantages": [
+						"Arc Node"
+					],
+					"name": "Arc Node",
+					"points": 2
+				},
+				"heavyArmour": {
+					"statisticAdjustments": {
+						"armour": 17
+					},
+					"name": "Heavy Armour",
+					"points": 2
+				},
+				"lightSpiker": {
+					"name": "Light Spiker",
+					"points": 4,
+					"weapons": {
+						"lightSpiker": {
+							"abilities": [
+								"volumeFire"
+							],
+							"name": "Light Spiker",
+							"qualities": [
+								"continuousEffectCorrosion",
+								"damageTypeCorrosion",
+								"pistol"
+							],
+							"quantity": 1,
+							"statistics": {
+								"power": 11,
+								"range": 11,
+								"rateOfFire": "d3"
+							},
+							"type": "ranged"
+						}
+					}
+				},
+				"necroVent": {
+					"grants": [
+						"acidBlast",
+						"acidicMist"
+					],
+					"name": "Necrovent",
+					"points": 2
+				}
+			},
+			"head": {
+				"beakedMaw": {
+					"grants": [
+						"reposition-3"
+					],
+					"name": "Beaked Maw",
+					"points": 3,
+					"weapons": {
+						"beakedMaw": {
+							"abilities": [
+								"lifeDrinker"
+							],
+							"name": "Beaked Maw",
+							"quantity": 1,
+							"statistics": {
+								"range": 1,
+								"power": 10
+							},
+							"type": "melee"
+						}
+					}
+				},
+				"deathRipper": {
+					"abilities": [
+						"sustainedAttack"
+					],
+					"name": "Deathripper",
+					"points": 3,
+					"weapons": {
+						"deathRipper": {
+							"abilities": [
+								"lifeDrinker"
+							],
+							"name": "Deathripper",
+							"quantity": 1,
+							"statistics": {
+								"range": 1,
+								"power": 12
+							},
+							"type": "melee"
+						}
+					}
+				},
+				"doomspitter": {
+					"advantages": [
+						"eyelessSight"
+					],
+					"name": "Doomspitter",
+					"points": 4,
+					"weapons": {
+						"doomspitter": {
+							"name": "Doomspitter",
+							"quantity": 1,
+							"statistics": {
+								"areaOfEffect": 2,
+								"range": 8,
+								"rateOfFire": 1,
+								"power": 8
+							},
+							"type": "ranged"
+						}
+					}
+				},
+				"venomBlaster": {
+					"name": "Venom Blaster",
+					"points": 4,
+					"weapons": {
+						"venomBlaster": {
+							"name": "Venom Blaster",
+							"qualities": [
+								"continuousEffectCorrosion",
+								"damageTypeCorrosion",
+								"pistol"
+							],
+							"quantity": 1,
+							"statistics": {
+								"range": "Spray 8",
+								"rateOfFire": 1,
+								"power": 12
+							},
+							"type": "ranged"
+						}
+					}
+				}
+			}
+		},
+		"statistics": {
+			"armour": 14,
+			"defense": 14,
+			"health": 20,
+			"meleeAttack": 5,
+			"rangedAttack": 5,
+			"speed": 7
+		},
+		"type": "warjack"
 	}
 }

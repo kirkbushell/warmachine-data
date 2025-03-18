@@ -1,4 +1,14 @@
 {
+	"acidBlast": {
+		"name": "Acid Blast",
+		"rules": "When this model is destroyed, models within 2\" of it suffer a POW 12 corrosion damage roll and the corrosion continuous effect.",
+		"type": "passive"
+	},
+	"acidicMist": {
+		"name": "Acidic Mist",
+		"rules": "This model has concealment. Living enemy models without Resistance: Corrosion suffer -2 to attack rolls while within 2\" of this model.",
+		"type": "passive"
+	},
 	"annihilator": {
 		"name": "Annihilator",
 		"rules": "This model gains an additional die on melee attack and melee damage rolls against living models. When a living model is destroyed within 3\" of this model, it never generates a soul token.",
@@ -119,6 +129,11 @@
 		"rules": "When a model in this model's control range makes an attack or damage roll, this model can spend a soul token to cause that model to re-roll the roll. Each roll can be re-rolled only once due to Knowledge of the Damned.",
 		"type": "passive"
 	},
+	"lifeDrinker": {
+		"name": "Life Drinker",
+		"rules": "When this model boxes a living enemy model with this weapon, this model can remove d3 damage points.",
+		"type": "weapon"
+	},
 	"magicAbility": {
 		"name": "Magic Ability",
 		"rules": "Performing a Magic Ability special action or special attack counts as casting a spell.",
@@ -177,7 +192,7 @@
 	},
 	"specialOrders": {
 		"name": "Special Orders",
-		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {reposition 3} for one turn.",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {reposition-3} for one turn.",
 		"type": "passive"
 	},
 	"steady": {
@@ -189,6 +204,11 @@
 		"name": "Strength of Death",
 		"rules": "During its Combat Action, this model can spend soul tokens to boost one attack or damage roll for each token spent.",
 		"type": "passive"
+	},
+	"sustainedAttack": {
+		"name": "Sustained Attack",
+		"rules": "During this model's activation, when it makes an attack with this weapon against the last model hit by the weapon this activation, the attack automatically hits.",
+		"type": "weapon"
 	},
 	"tenacity": {
 		"name": "Tenacity",
@@ -204,6 +224,11 @@
 		"name": "Vital Magic",
 		"rules": "When a spell or special rule would cause one or more of this model's upkeep spells to expire, this model can keep one or more of its upkeep spells in play by suffering d3 damage points for each spell kept in play.",
 		"type": "passive"
+	},
+	"volumeFire": {
+		"name": "Volume Fire",
+		"rules": "Gain +1 to attack and damage rolls with this weapon against medium-based models and +2 to attack and damage rolls against larger-based models.",
+		"type": "weapon"
 	},
 	"wraithbinder": {
 		"name": "Wraithbinder",

@@ -83,8 +83,8 @@ export const Weapons = z.record(z.string(), z.object({
 	qualities: z.array(WeaponQuality).optional(),
 	quantity: z.number().positive(),
 	statistics: z.object({
-		range: z.number(),
-		rateOfFire: z.string().optional(),
+		range: z.union([z.number(), z.string().regex(new RegExp("^Spray [0-9]+$"))]),
+		rateOfFire: z.union([z.number(), z.string().optional()]),
 		power: z.number(),
 	}),
 	type: WeaponType,
@@ -100,4 +100,11 @@ export const Statistics = z.object({
 	meleeAttack: z.number().optional(),
 	rangedAttack: z.number().optional(),
 	speed: z.number(),
+})
+
+export const Option = z.object({
+	grants: z.array(z.string()).optional(),
+	name: z.string(),
+	points: Points,
+	weapons: Weapons.optional(),
 })
