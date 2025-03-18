@@ -30,5 +30,35 @@
 			"range": "self"
 		},
 		"rules": "While in the spellcaster's control range, friendly Faction models gain +2 ARM against ranged and arcane attack damage rolls. Deceleration lasts for one round."
+	},
+	"impendingDoom": {
+		"name": "Impending Doom",
+		"statistics": {
+			"cost": 2,
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Enemy models within 5\" of the spellcaster are pushed 5\" directly toward it in the order you choose."
+	},
+	"redline": {
+		"name": "Redline",
+		"statistics": {
+			"cost": 2,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": 6
+		},
+		"rules": "Target warjack in the spellcaster's battlegroup gains +2 SPD and can run, charge, or make slam or trample power attacks without spending focus. Additionally, the affected model gains +2 to its melee attack damage rolls and collateral damage rolls. At the end of each of its activations, the affected warjack suffers d3 damage points."
+	},
+	"shadowmancer": {
+		"name": "Shadowmancer",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 3,
+			"duration": "round",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "While in the spellcaster's control range, models in its battlegroup gain Stealth and Dark Shroud. Shadowmancer lasts for one round."
 	}
 }

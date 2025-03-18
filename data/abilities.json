@@ -4,6 +4,11 @@
 		"rules": "When a model in this model's {battlegroup} destroyed an enemy {construct} model with a {melee attack}, remove d3 + 1 damage points from model in this model's {battlegroup} currently in its {control range} and remove the destroyed model from play.",
 		"type": "passive"
 	},
+	"darkShroud": {
+		"name": "Dark Shroud",
+		"rules": "While within 2\" of a model with Dark Shroud, enemy models suffer -2 ARM.",
+		"type": "passive"
+	},
 	"digIn": {
 		"name": "Dig In",
 		"rules": "A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.",
