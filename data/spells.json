@@ -1,23 +1,33 @@
 {
+	"annihilation": {
+		"name": "Annihilation",
+		"statistics": {
+			"cost": 4,
+			"offensive": true,
+			"power": "10/10",
+			"range": 10
+		},
+		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
+	},
 	"carrionFeast": {
 		"name": "Carrion Feast",
 		"statistics": {
 			"cost": 3,
-			"range": 10,
-			"power": 10,
 			"duration": "upkeep",
-			"offensive": true
+			"offensive": true,
+			"power": 10,
+			"range": 10
 		},
 		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
 	},
 	"deceleration": {
 		"name": "Deceleration",
 		"statistics": {
-			"cost": 3,
-			"range": "self",
 			"areaOfEffect": "controlRange",
+			"cost": 3,
 			"duration": "round",
-			"offensive": false
+			"offensive": false,
+			"range": "self"
 		},
 		"rules": "While in the spellcaster's control range, friendly Faction models gain +2 ARM against ranged and arcane attack damage rolls. Deceleration lasts for one round."
 	}

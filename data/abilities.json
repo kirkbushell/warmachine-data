@@ -1,38 +1,53 @@
 {
 	"chopShop": {
-		"type": "passive",
 		"name": "Chop Shop",
-		"rules": "When a model in this model's {battlegroup} destroyed an enemy {construct} model with a {melee attack}, remove d3 + 1 damage points from model in this model's {battlegroup} currently in its {control range} and remove the destroyed model from play."
+		"rules": "When a model in this model's {battlegroup} destroyed an enemy {construct} model with a {melee attack}, remove d3 + 1 damage points from model in this model's {battlegroup} currently in its {control range} and remove the destroyed model from play.",
+		"type": "passive"
 	},
 	"digIn": {
-		"type": "passive",
 		"name": "Dig In",
-		"rules": "A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged."
+		"rules": "A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.",
+		"type": "passive"
+	},
+	"entropicForce": {
+		"name": "Entropic Force",
+		"rules": "While within 5\" of this model, enemy models lose Tough and cannot have damage removed from them.",
+		"type": "passive"
 	},
 	"fieldMarshal": {
-		"type": "passive",
 		"name": "Field Marshal []",
-		"rules": "{Cohort} models in this model's {battlegroup} gain []."
+		"rules": "{Cohort} models in this model's {battlegroup} gain [].",
+		"type": "passive"
+	},
+	"ghostShield": {
+		"name": "Ghost Shield",
+		"rules": "{Cohort} models in this model's {battlegroup} gain [].",
+		"type": "passive"
 	},
 	"repair": {
-		"type": "action",
 		"name": "Repair",
 		"rules": "Target friendly Faction {construct} model. If the model is in range, remove d3 + 1 damage points from it.",
-		"range": 1
+		"range": 1,
+		"type": "action"
 	},
 	"repairable": {
-		"type": "passive",
 		"name": "Repairable",
-		"rules": "This model can be targeted with {Repair} special actions as if it were a {construct} model."
+		"rules": "This model can be targeted with {Repair} special actions as if it were a {construct} model.",
+		"type": "passive"
 	},
 	"retaliatoryStrike": {
-		"type": "passive",
 		"name": "Retaliatory Strike",
-		"rules": "If a model with Retaliatory Strike is hit by an enemy melee attack during your opponent's turn, after that attack is resolved the model with Retaliatory Strike can immediately make one basic melee attack against the attacking model. A model can make only one Retaliatory Strike per turn."
+		"rules": "If a model with Retaliatory Strike is hit by an enemy melee attack during your opponent's turn, after that attack is resolved the model with Retaliatory Strike can immediately make one basic melee attack against the attacking model. A model can make only one Retaliatory Strike per turn.",
+		"type": "passive"
+	},
+	"soulTakerCullSoul": {
+		"name": "Soul Taker: Cull Soul",
+		"rules": "This model can gain soul tokens. When a living enemy model is destroyed within 2\" of this model, this m odel gains the destroyed model's soul token. After this model replenishes its focus during your next Control Phase, replace each soul token with 1 focus point.",
+		"type": "passive"
 	},
 	"steady": {
-		"type": "passive",
 		"name": "Steady",
-		"rules": "This model cannot become {knocked down}."
+		"rules": "This model cannot become {knocked down}.",
+		"type": "passive"
 	}
 }

@@ -7,9 +7,9 @@ export default z.object({
 	statistics: z.object({
 		areaOfEffect: z.union([z.number().positive(), z.literal("controlRange")]).optional(),
 		cost: z.number().positive(),
-		duration: z.enum(["round", "upkeep"]),
+		duration: z.enum(["round", "upkeep"]).optional(),
 		offensive: z.boolean(),
-		power: z.number().positive().optional(),
+		power: z.union([z.number().positive(), z.string().regex(new RegExp("^[0-9]+/[0-9]+$"))]).optional(),
 		range: Range.optional(),
 	})
 })

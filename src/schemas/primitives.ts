@@ -76,12 +76,13 @@ export const WeaponType = z.enum([
 export const Weapons = z.record(z.string(), z.object({
 	abilities: z.string().optional(),
 	name: z.string(),
+	qualities: z.array(WeaponQuality).optional(),
+	quantity: z.number().positive(),
 	statistics: z.object({
 		range: z.number(),
 		power: z.number(),
 	}),
 	type: WeaponType,
-	qualities: z.array(WeaponQuality).optional(),
 }))
 
 export const Statistics = z.object({

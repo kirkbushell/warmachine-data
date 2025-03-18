@@ -3,6 +3,7 @@
 		"baseSize": 40,
 		"name": "Discerptor Eviscerus",
 		"type": "warcaster",
+		"rackSlots": 2,
 		"advantages": [
 			"pathfinder",
 			"undead"
@@ -22,8 +23,8 @@
 			"controlRange": 14,
 			"defense": 14,
 			"health": 17,
-			"speed": 6,
-			"meleeAttack": 6
+			"meleeAttack": 6,
+			"speed": 6
 		},
 		"abilities": [
 			"fieldMarshal-retaliatoryStrike",
@@ -34,11 +35,81 @@
 		],
 		"weapons": {
 			"bonePicker": {
+				"name": "Mortifier",
+				"type": "melee",
+				"qualities": [
+					"damageTypeMagical"
+				],
+				"quantity": 2,
+				"statistics": {
+					"range": 1,
+					"power": 15
+				},
+				"abilities": {
+					"bloodBoon": {
+						"name": "Blood Boon",
+						"rules": "Once per activation, immediately after resolving an attack in which it destroyed an enemy model with this weapon, this model can cast a spell without spending focus or fury points."
+					},
+					"gatesOfHell": {
+						"name": "Gates of Hell",
+						"rules": "Once per activation, immediately after resolving an attack in which it destroyed a living or undead enemy model with this weapon, this model can spend one soul token to be placed anywhere completely within 4\" of its current location, then its activation ends."
+					}
+				}
+			}
+		},
+		"feat": {
+			"doomsDay": {
+				"name": "Doom's Day",
+				"rules": "Dekathus immediately gains five soul tokens. When a model in Dekathus' control range makes an attack or damage roll, Dekathus can spend a soul token to cause that model to re-roll that roll. Each roll can be re-rolled only once due to Doom's day. Doom's day lasts for one round."
+			}
+		},
+		"spells": [
+			"annihilation",
+			"impendingDoom",
+			"shadowmancer"
+		]
+	},
+	"lichLordDekathus": {
+		"baseSize": 40,
+		"name": "Lich Lord Dekathus",
+		"type": "warcaster",
+		"rackSlots": 2,
+		"advantages": [
+			"pathfinder",
+			"tough",
+			"undead",
+			"unstoppable"
+		],
+		"faction": "necrofactorium",
+		"fieldAllowance": "c",
+		"keywords": [
+			"cryx",
+			"necrofactorium",
+			"warcaster"
+		],
+		"statistics": {
+			"arcana": 7,
+			"arcaneAttack": 6,
+			"armour": 18,
+			"controlRange": 14,
+			"defense": 14,
+			"health": 17,
+			"meleeAttack": 7,
+			"speed": 5
+		},
+		"abilities": [
+			"entropicForce",
+			"ghostShield",
+			"soulTakerCullSoul"
+		],
+		"weapons": {
+			"bonePicker": {
 				"name": "Bone Picker",
 				"type": "melee",
 				"qualities": [
-					"magicWeapon"
+					"damageTypeMagical"
 				],
+				"quantity": 2,
 				"statistics": {
 					"range": 1,
 					"power": 12
@@ -46,7 +117,7 @@
 				"abilities": {
 					"erosion": {
 						"name": "Erosion",
-						"rules": "This model gains an {additional die} on this weapon's damage rolls against {construct} models."
+						"rules": "This model gains an additional die on this weapon's damage rolls against construct models."
 					}
 				}
 			}
