@@ -92,3 +92,14 @@ export const Statistics = z.object({
 	rangedAttack: z.number().optional(),
 	speed: z.number(),
 })
+
+export const Unit = z.object({
+	advantages: z.array(Advantage),
+	baseSize: z.number().positive(),
+	faction: Faction,
+	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
+	keywords: z.array(z.string()),
+	name: z.string(),
+	statistics: Statistics,
+	type: z.enum(["attachment", "battleEngine", "solo", "structure", "unit", "warbeast", "warcaster", "warjack", "warlock"]),
+})

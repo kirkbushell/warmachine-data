@@ -1,0 +1,94 @@
+{
+	"jackMarshal": {
+		"name": "'Jack Marshal",
+		"rules": "This model is a 'jack marshal and can command warjacks."
+	},
+	"advanceDeployment": {
+		"name": "Advance Deployment",
+		"rules": "In most scenarios, this mokdel can be depoyed after normal deployment, up to 3\" beyond the established deployment zone."
+	},
+	"ambush": {
+		"name": "Ambush",
+		"rules": "In most scenarios, this model does not have to be deployed at the start of the game. Instead, it can be placed at the end of any of your Control Phases after the first round."
+	},
+	"amphibious": {
+		"name": "Amphibious",
+		"rules": "This model treats shallow water as open terrain while advancing. While completely in shallow water, this model gains concealment and does not block line of sight."
+	},
+	"arcNode": {
+		"name": "Arc Node",
+		"rules": "This warjack is a channeler equipped with an arc node and can act as a conduit for spells cast by its warcaster."
+	},
+	"assault": {
+		"name": "Assault",
+		"rules": "This model can make an Assault ranged attack."
+	},
+	"cavalry": {
+		"name": "Cavalry",
+		"rules": "This model is a cavalry model."
+	},
+	"combinedMeleeAttack": {
+		"name": "Combined Melee Attack",
+		"rules": "This model can participate in combined melee attacks with other models in its unit."
+	},
+	"combinedRangedAttack": {
+		"name": "Combined Ranged Attack",
+		"rules": "This model can participate in combined ranged attacks with other models in its unit."
+	},
+	"construct": {
+		"name": "Construct",
+		"rules": "This model is a construct and is not a living model."
+	},
+	"dualAttack": {
+		"name": "Dual Attack",
+		"rules": "This model can make melee and ranged attacks in the same activation. This model cannot make ranged attacks after making a power attack."
+	},
+	"eyelessSight": {
+		"name": "Eyeless Sight",
+		"rules": "This model ignores cloud effects when determining line of sight. This model ignores concealment and Stealth and never suffers Blind."
+	},
+	"flight": {
+		"name": "Flight",
+		"rules": "This model can fly."
+	},
+	"gladiator": {
+		"name": "Gladiator",
+		"rules": "This model gains +2 on power attack damage rolls and on power attack collateral damage rolls."
+	},
+	"headbuttPowerAttack": {
+		"name": "Headbutt Power Attack",
+		"rules": "This model can make Headbutt power attacks."
+	},
+	"incorporeal": {
+		"name": "Incorporeal",
+		"rules": "This model roams the battlefield in spectral form."
+	},
+	"pathfinder": {
+		"name": "Pathfinder",
+		"rules": "This model treats rough terrain as open terrain while advancing. While charging, slam power attacking, or trample power attacking, this model does not stop its movement when it contacts an obstacle."
+	},
+	"slamPowerAttack": {
+		"name": "Slam Power Attack",
+		"rules": "This model can make Slam power attacks."
+	},
+	"soulless": {
+		"name": "Soulless",
+		"rules": "This living model does not generate a soul token when it is destroyed."
+	},
+	"stealth": {
+		"name": "Stealth",
+		"rules": "Ranged and arcane attacks targeting this model from a point of origin greater than 5\" away automatically miss. This model is not an intervening model when determining line of sight from a model more than 5\" away."
+	},
+	"tough": {
+		"name": "Tough",
+		"rules": "When this model is disabled, roll a d6. On a 5 or 6, remove 1 damage point from this model; it is no longer disabled and becomes knocked down. While knocked down, this model loses Tough."
+	},
+	"undead": {
+		"name": "Undead",
+		"rules": "This model is an undead model and not a living model."
+	},
+	"unstoppable": {
+		"name": "Unstoppable",
+		"rules": "This model does not have to forfeit its Combat Action when it advances or is placed out of one or more enemy models' melee ranged during its Normal Movement (see Disengaging)."
+	}
+}
