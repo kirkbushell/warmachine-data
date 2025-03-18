@@ -66,7 +66,13 @@ export const build = (program: Command) => async () => {
 		}
 	}
 	
-	const appendix = JSON.stringify(map, null, 4)
+	const appendix = JSON.stringify(Object.keys(map).sort().reduce(
+		(obj: { [key: string]: string }, key: string) => {
+			obj[key] = map[key]
+			return obj
+		}, {}
+	), null, 4)
+	
 	const buildDirectory = process.cwd() + '/build'
 	
 	if (!fs.existsSync(buildDirectory)) {
