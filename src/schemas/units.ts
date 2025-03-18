@@ -34,6 +34,7 @@ export const Unit = BaseUnit.extend({
 })
 
 export const Warjack = BaseUnit.extend({
+	damageGrid: z.array(z.number()).length(6),
 	options: z.record(z.string(), z.record(z.string(), Option)),
 })
 
