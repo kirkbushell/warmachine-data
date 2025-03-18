@@ -36,7 +36,7 @@
 		"rules": "Play this card at the start of your Maintenance Phase on one of your models/units. If the affected models were knocked down, they stand up. If the affected models were stationary, the stationary status expires. If the affected models were suffering continuous or shakeable effects, like {blind} or {shadowBind}, those effects expire."
 	},
 	"sapper": {
-		"name": "Lucky Penny",
-		"rules": "Play this card at the start of a friendly model's activation to give that model one corpse token, essence point, focus point, fury point, rage token, or soul token."
+		"name": "Sapper",
+		"rules": "Play this card at any time during your turn. Immediately remove a Defense from the table."
 	}
 }
