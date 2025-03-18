@@ -1,0 +1,42 @@
+{
+	"blessingOfTheGods": {
+		"name": "Blessing of the Gods",
+		"rules": "Play this card any time during activation of one of your models. That model's weapons gain {blessed} and {damageTypeMagical} this activation."
+	},
+	"breakThrough": {
+		"name": "Break Through",
+		"rules": "Play this card any time during activation of one of your models/units. Those models gain {unstoppable} this activation."
+	},
+	"carefulReconnaissance": {
+		"name": "Careful Reconnaissance",
+		"rules": "Play this card any time during activation of one of your models/units. Those models gain {pathfinder} this activation."
+	},
+	"defenses": {
+		"name": "Defenses",
+		"rules": "Play this card at the start of the game after turn order has been determined and standard terrain objectives have been placed for the scenario, but before deploying models. If you are the first player, you can place up to two Defenses. If you are the second player, you can place up to three Defenses. If both players play the Defenses Command Card, take turns placing Defenses starting with the second player. A player can only place Defenses within 24\" of the rear edge of their Deployment Zone. Additionally, Defenses cannot be placed at the start of the game within 3\" of an objective, obstruction, obstacle, or another Defense terrain feature.."
+	},
+	"duckAndCover": {
+		"name": "Duck and Cover!",
+		"rules": "Play this card any time during activation of one of your warrior units. Those models gain cover and Resistance: Blast for one round."
+	},
+	"hitAndRun": {
+		"name": "Hit & Run",
+		"rules": "Play this card any time during activation of one of your models. That model gains {reposition-3} this activation."
+	},
+	"luckyPenny": {
+		"name": "Lucky Penny",
+		"rules": "Play this card at the start of a friendly model's activation to give that model one corpse token, essence point, focus point, fury point, rage token, or soul token."
+	},
+	"oldFaithful": {
+		"name": "Old Faithful",
+		"rules": "Play this card during your Control Phase before allocating focus. Remove d3+1 damage points from a friendly Cohort model or battle engine in your army."
+	},
+	"putTheFiresOut": {
+		"name": "Put the Fires Out",
+		"rules": "Play this card at the start of your Maintenance Phase on one of your models/units. If the affected models were knocked down, they stand up. If the affected models were stationary, the stationary status expires. If the affected models were suffering continuous or shakeable effects, like {blind} or {shadowBind}, those effects expire."
+	},
+	"sapper": {
+		"name": "Lucky Penny",
+		"rules": "Play this card at the start of a friendly model's activation to give that model one corpse token, essence point, focus point, fury point, rage token, or soul token."
+	}
+}

@@ -105,7 +105,7 @@ export const Statistics = z.object({
 })
 
 export const Option = z.object({
-	grants: z.array(z.string()).optional(),
+	granted: z.array(z.string()).optional(),
 	name: z.string(),
 	points: Points,
 	weapons: z.array(Weapon).optional(),

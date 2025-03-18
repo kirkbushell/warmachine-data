@@ -38,14 +38,21 @@ export const Warjack = BaseUnit.extend({
 	options: z.record(z.string(), z.record(z.string(), Option)),
 })
 
+export const Attachment = BaseUnit.extend({
+	points: Points,
+	weapons: Weapons
+})
+
 export const unitSchema = (record: { type: string }): ZodType => {
 	switch (record.type) {
-		case 'warcaster':
-			return Warcaster
+		case 'attachment':
+			return Attachment
 		case 'solo':
 			return Solo
 		case 'unit':
 			return Unit
+		case 'warcaster':
+			return Warcaster
 		case 'warjack':
 			return Warjack
 	}

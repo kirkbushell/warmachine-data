@@ -480,7 +480,7 @@
 					]
 				},
 				"necroVent": {
-					"grants": [
+					"granted": [
 						"acidBlast",
 						"acidicMist"
 					],
@@ -490,7 +490,7 @@
 			},
 			"head": {
 				"beakedMaw": {
-					"grants": [
+					"granted": [
 						"reposition-3"
 					],
 					"name": "Beaked Maw",
