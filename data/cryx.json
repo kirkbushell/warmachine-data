@@ -450,8 +450,8 @@
 				"lightSpiker": {
 					"name": "Light Spiker",
 					"points": 4,
-					"weapons": {
-						"lightSpiker": {
+					"weapons": [
+						{
 							"abilities": [
 								"volumeFire"
 							],
@@ -469,7 +469,7 @@
 							},
 							"type": "ranged"
 						}
-					}
+					]
 				},
 				"necroVent": {
 					"grants": [
@@ -487,8 +487,8 @@
 					],
 					"name": "Beaked Maw",
 					"points": 3,
-					"weapons": {
-						"beakedMaw": {
+					"weapons": [
+						{
 							"abilities": [
 								"lifeDrinker"
 							],
@@ -500,7 +500,7 @@
 							},
 							"type": "melee"
 						}
-					}
+					]
 				},
 				"deathRipper": {
 					"abilities": [
@@ -508,8 +508,8 @@
 					],
 					"name": "Deathripper",
 					"points": 3,
-					"weapons": {
-						"deathRipper": {
+					"weapons": [
+						{
 							"abilities": [
 								"lifeDrinker"
 							],
@@ -521,7 +521,7 @@
 							},
 							"type": "melee"
 						}
-					}
+					]
 				},
 				"doomspitter": {
 					"advantages": [
@@ -529,8 +529,8 @@
 					],
 					"name": "Doomspitter",
 					"points": 4,
-					"weapons": {
-						"doomspitter": {
+					"weapons": [
+						{
 							"name": "Doomspitter",
 							"quantity": 1,
 							"statistics": {
@@ -541,13 +541,13 @@
 							},
 							"type": "ranged"
 						}
-					}
+					]
 				},
 				"venomBlaster": {
 					"name": "Venom Blaster",
 					"points": 4,
-					"weapons": {
-						"venomBlaster": {
+					"weapons": [
+						{
 							"name": "Venom Blaster",
 							"qualities": [
 								"continuousEffectCorrosion",
@@ -562,7 +562,7 @@
 							},
 							"type": "ranged"
 						}
-					}
+					]
 				}
 			}
 		},

@@ -77,7 +77,7 @@ export const WeaponType = z.enum([
 	"ranged",
 ])
 
-export const Weapons = z.record(z.string(), z.object({
+export const Weapon = z.object({
 	abilities: Abilities.optional(),
 	name: z.string(),
 	qualities: z.array(WeaponQuality).optional(),
@@ -88,7 +88,9 @@ export const Weapons = z.record(z.string(), z.object({
 		power: z.number(),
 	}),
 	type: WeaponType,
-}))
+})
+
+export const Weapons = z.record(z.string(), Weapon)
 
 export const Statistics = z.object({
 	arcana: z.number().optional(),
@@ -106,5 +108,5 @@ export const Option = z.object({
 	grants: z.array(z.string()).optional(),
 	name: z.string(),
 	points: Points,
-	weapons: Weapons.optional(),
+	weapons: z.array(Weapon).optional(),
 })
