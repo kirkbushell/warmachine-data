@@ -1,7 +1,9 @@
-import {z, ZodType} from "zod"
+import {z} from "zod"
 
 // This schema is used to validate the core structure of the files that contain the required schema.
-export const FileSchema = (schema: ZodType) => z.record(z.string(), schema)
+export const Dataset = z.record(z.string(), z.any())
+
+export const Abilities = z.array(z.union([z.string(), z.array(z.string())]))
 
 export const Advantage = z.enum([
 	"jackMarshal",
@@ -45,6 +47,8 @@ export const Feat = z.record(z.string(), z.object({
 	rules: z.string(),
 }))
 
+export const Points = z.number().positive()
+
 export const Range = z.union([z.number().positive(), z.literal("self")])
 
 export const WeaponQuality = z.enum([
@@ -74,12 +78,13 @@ export const WeaponType = z.enum([
 ])
 
 export const Weapons = z.record(z.string(), z.object({
-	abilities: z.string().optional(),
+	abilities: Abilities.optional(),
 	name: z.string(),
 	qualities: z.array(WeaponQuality).optional(),
 	quantity: z.number().positive(),
 	statistics: z.object({
 		range: z.number(),
+		rateOfFire: z.string().optional(),
 		power: z.number(),
 	}),
 	type: WeaponType,
@@ -95,15 +100,4 @@ export const Statistics = z.object({
 	meleeAttack: z.number().optional(),
 	rangedAttack: z.number().optional(),
 	speed: z.number(),
-})
-
-export const Unit = z.object({
-	advantages: z.array(Advantage),
-	baseSize: z.number().positive(),
-	faction: Faction,
-	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
-	keywords: z.array(z.string()),
-	name: z.string(),
-	statistics: Statistics,
-	type: z.enum(["attachment", "battleEngine", "solo", "structure", "unit", "warbeast", "warcaster", "warjack", "warlock"]),
 })

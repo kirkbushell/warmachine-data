@@ -37,21 +37,21 @@ Each schema defines the data structures expected within the JSON files.
 In order to validate any data file, you can call the validator like so:
 
 ```console
-npx tsx src/data.ts <dataset>
+npm run validate <dataset>
 ```
 
 Where <dataset> is the name of the data file you wish to validate inside data/ (without the .json suffix). So if we
 wanted to validate the data/abilities.json file, we could use the command below:
 
 ```console
-npx tsx src/data.ts abilities
+npm run validate abilities
 ```
 
 If you want to validate all files, you can call the command "all" or with no arguments:
 
 ```console
-npx tsx src/data.ts all
-npx tsx src/data.ts
+npm run validate all
+npm run validate
 ```
 
 ## Builds
@@ -64,7 +64,7 @@ appendix.json file, and call the fieldMarshal item on that object:
 ```typescript
 const appendix = import('appendix.json')
 
-console.log(appendix.fieldMarshal) // This will return: abilities.json
+console.log(appendix.fieldMarshal) // This will return: abilities, a reference to data/abilities.json
 ```
 
 The appendix is really just a map of keys where the values represent the files the data is found in.
@@ -72,7 +72,7 @@ The appendix is really just a map of keys where the values represent the files t
 In order to build the appendix, you can call the following command:
 
 ```
-npx tsx src/build.ts
+npm run build
 ```
 
 This will then loop over all data files, creating the appropriate references and writing it to build/appendix.json

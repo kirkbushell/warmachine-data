@@ -1,17 +1,67 @@
 {
+	"annihilator": {
+		"name": "Annihilator",
+		"rules": "This model gains an additional die on melee attack and melee damage rolls against living models. When a living model is destroyed within 3\" of this model, it never generates a soul token.",
+		"type": "passive"
+	},
+	"apparition": {
+		"name": "Apparition",
+		"rules": "During your Control Phase, place this model anywhere completely within 2\" of its current location.",
+		"type": "passive"
+	},
+	"banish": {
+		"name": "Banish",
+		"rules": "When this weapon boxes an enemy non-Leader model, immediately after the attack is resolved you can place the enemy model anywhere completely within 1\" of its current location.",
+		"type": "weapon"
+	},
+	"battlePlan": {
+		"name": "Battle Plan",
+		"rules": "This model can use one of the following plans at any time during its activation:",
+		"type": "passive"
+	},
+	"blackMantle": {
+		"name": "Black Mantle",
+		"rules": "While B2B with a model with Black Mantle, friendly Faction models gain {stealth}.",
+		"type": "attack"
+	},
+	"bloodBoon": {
+		"name": "Blood Boon",
+		"rules": "Once per activation, immediately after resolving an attack in which it destroyed an enemy model with this weapon, this model can cast a spell without spending focus or fury points.",
+		"type": "weapon"
+	},
+	"bloodShadow": {
+		"name": "Blood Shadow",
+		"rules": "If this attack boxes a living or undead model, this model can gain Incorporeal for one round.",
+		"type": "weapon"
+	},
 	"chopShop": {
 		"name": "Chop Shop",
-		"rules": "When a model in this model's {battlegroup} destroyed an enemy {construct} model with a {melee attack}, remove d3 + 1 damage points from model in this model's {battlegroup} currently in its {control range} and remove the destroyed model from play.",
+		"rules": "When a model in this model's battlegroup destroyed an enemy construct model with a melee attack, remove d3 + 1 damage points from model in this model's battlegroup currently in its control range and remove the destroyed model from play.",
 		"type": "passive"
+	},
+	"darkDomination": {
+		"name": "Dark Domination",
+		"rules": "When this model hits an enemy warjack that has a non-crippled cortex with a basic melee attack made with this weapon during this model's activation, you can take control of the warjack. Immediately after the attack has been resolved, you can make a full advance with the warjack and can then make one basic attack, then Dark Domination expires. A warjack can be affected by Dark Domination only once per turn.",
+		"type": "weapon"
 	},
 	"darkShroud": {
 		"name": "Dark Shroud",
 		"rules": "While within 2\" of a model with Dark Shroud, enemy models suffer -2 ARM.",
 		"type": "passive"
 	},
+	"deathToll": {
+		"name": "Death Toll [Mechanithrall]",
+		"rules": "When this weapon boxes a living enemy warrior model, remove that model from play and return one Grunt to a small-based Mechanithrall unit within 8\" of this model. Place the Grunt with 2\" of another model in that unit. The Grunt must forfeit its Normal Movement and Combat Action the turn it is put into play.",
+		"type": "weapon"
+	},
 	"digIn": {
 		"name": "Dig In",
 		"rules": "A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.",
+		"type": "passive"
+	},
+	"dodge": {
+		"name": "Dodge",
+		"rules": "This model can advance up to 2\" immediately after an enemy attack that missed it is resolved.",
 		"type": "passive"
 	},
 	"entropicForce": {
@@ -19,25 +69,95 @@
 		"rules": "While within 5\" of this model, enemy models lose Tough and cannot have damage removed from them.",
 		"type": "passive"
 	},
-	"fieldMarshal": {
-		"name": "Field Marshal []",
-		"rules": "{Cohort} models in this model's {battlegroup} gain [].",
+	"erosion": {
+		"name": "Erosion",
+		"rules": "This model gains an additional die on this weapon's damage rolls against construct models.",
+		"type": "weapon"
+	},
+	"feignDeath": {
+		"name": "Feign Death",
+		"rules": "A model with Feign Death cannot be targeted by ranged or arcane attacks while knocked down.",
 		"type": "passive"
+	},
+	"fieldMarshal": {
+		"name": "Field Marshal [X]",
+		"rules": "Cohort models in this model's battlegroup gain [X].",
+		"type": "passive"
+	},
+	"gang": {
+		"name": "Gang",
+		"rules": "When making a melee attack targeting an enemy model in the melee range of another model in this unit, this model gains +2 to melee attack and damage rolls.",
+		"type": "weapon"
+	},
+	"gatesOfHell": {
+		"name": "Gates of Hell",
+		"rules": "Once per activation, immediately after resolving an attack in which it destroyed a living or undead enemy model with this weapon, this model can spend one soul token to be placed anywhere completely within 4\" of its current location, then its activation ends.",
+		"type": "weapon"
 	},
 	"ghostShield": {
 		"name": "Ghost Shield",
-		"rules": "{Cohort} models in this model's {battlegroup} gain [].",
+		"rules": "This model gains +1 ARM for each soul token currently on it.",
+		"type": "passive"
+	},
+	"grapplingHook": {
+		"name": "Grappling Hook",
+		"rules": "At the end of this models activation, this model can spend 1 focus point to be placed completely within 5\" of its current location.",
+		"type": "passive"
+	},
+	"hexBlast": {
+		"name": "Hex Blast",
+		"rules": "Hex Blast is a RNG 10, AOE2, POW 13/8 arcane attack. Enemy upkeep spells and animi on the model/unit directly hit by Hex Blast immediately expire.",
+		"type": "attack"
+	},
+	"invocationOfBitterestNight": {
+		"name": "Invocation of Bitterest Night",
+		"rules": "This model gains {stealth} and {blackMantle} for one round.",
+		"type": "action"
+	},
+	"knowledgeOfTheDamned": {
+		"name": "Knowledge of the Damned",
+		"rules": "When a model in this model's control range makes an attack or damage roll, this model can spend a soul token to cause that model to re-roll the roll. Each roll can be re-rolled only once due to Knowledge of the Damned.",
+		"type": "passive"
+	},
+	"magicAbility": {
+		"name": "Magic Ability",
+		"rules": "Performing a Magic Ability special action or special attack counts as casting a spell.",
+		"type": "action"
+	},
+	"necrosurgery": {
+		"name": "Necrosurgery [d3+1]",
+		"rules": "RNG 1. Target friendly undead Faction model. If the model is in range, remove d3+1 damage points from it.",
+		"type": "action"
+	},
+	"poltergeist": {
+		"name": "Poltergeist",
+		"rules": "When an enemy model misses this model with an attack, immediately after the attack is resolved you can choose to push the enemy d3\" directly away from this model.",
+		"type": "passive"
+	},
+	"precisionStrike": {
+		"name": "Precision Strike",
+		"rules": "While within 10\" of this model, friendly models ignore other friendly models when determining LOS. Friendly models can advance through other friendly models within 10\" of this model if they have enough movement to move completely past them. Precision Strike lasts for one turn.",
+		"type": "passive"
+	},
+	"relentlessCharge": {
+		"name": "Relentless Charge",
+		"rules": "While advancing as part of a charge, a model with Relentless Charge gains {pathfinder}.",
 		"type": "passive"
 	},
 	"repair": {
 		"name": "Repair",
-		"rules": "Target friendly Faction {construct} model. If the model is in range, remove d3 + 1 damage points from it.",
+		"rules": "Target friendly Faction construct model. If the model is in range, remove d3 + 1 damage points from it.",
 		"range": 1,
 		"type": "action"
 	},
 	"repairable": {
 		"name": "Repairable",
-		"rules": "This model can be targeted with {Repair} special actions as if it were a {construct} model.",
+		"rules": "This model can be targeted with {repair} special actions as if it were a construct model.",
+		"type": "passive"
+	},
+	"reposition": {
+		"name": "Reposition [X]",
+		"rules": "At the end of a model/unit with Reposition [X]'s activation, it can advance up to X, then its activation ends.",
 		"type": "passive"
 	},
 	"retaliatoryStrike": {
@@ -50,9 +170,44 @@
 		"rules": "This model can gain soul tokens. When a living enemy model is destroyed within 2\" of this model, this m odel gains the destroyed model's soul token. After this model replenishes its focus during your next Control Phase, replace each soul token with 1 focus point.",
 		"type": "passive"
 	},
+	"soulTakerSpectralScavenger": {
+		"name": "Soul Taker: Spectral Scavenger",
+		"rules": "This model can gain soul tokens. When a living model is destroyed in this model's control range, this model gains the destroyed model's soul token. This model can have up to three soul tokens at any time. This model can spend soul tokens for the following:.",
+		"type": "passive"
+	},
+	"specialOrders": {
+		"name": "Special Orders",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {reposition 3} for one turn.",
+		"type": "passive"
+	},
 	"steady": {
 		"name": "Steady",
-		"rules": "This model cannot become {knocked down}.",
+		"rules": "This model cannot become knocked down.",
+		"type": "passive"
+	},
+	"strengthOfDeath": {
+		"name": "Strength of Death",
+		"rules": "During its Combat Action, this model can spend soul tokens to boost one attack or damage roll for each token spent.",
+		"type": "passive"
+	},
+	"tenacity": {
+		"name": "Tenacity",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {feignDeath} for one round.",
+		"type": "passive"
+	},
+	"vengeance": {
+		"name": "Vengeance",
+		"rules": "During your Maintenance Phase, if one or more models in this unit were damaged by enemy attacks during the last round, each model in the unit can advance 3\" and make one basic melee attack.",
+		"type": "weapon"
+	},
+	"vitalMagic": {
+		"name": "Vital Magic",
+		"rules": "When a spell or special rule would cause one or more of this model's upkeep spells to expire, this model can keep one or more of its upkeep spells in play by suffering d3 damage points for each spell kept in play.",
+		"type": "passive"
+	},
+	"wraithbinder": {
+		"name": "Wraithbinder",
+		"rules": "While within 10\" of this model, friendly incorporeal models gain +3 ARM.",
 		"type": "passive"
 	}
 }

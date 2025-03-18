@@ -1,20 +1,20 @@
-import {ZodObject, ZodType} from "zod"
+import {SafeParseReturnType, ZodType} from "zod"
 import {Command} from "commander"
 import output from "./output"
 import * as fs from "node:fs"
 import Ability from "./schemas/Ability"
 import Advantage from "./schemas/Advantage"
 import Spell from "./schemas/Spell"
-import Warcaster from "./schemas/Warcaster"
-import {FileSchema} from "./schemas/primitives";
-import Keyword from "./schemas/Keyword";
+import {Dataset} from "./schemas/primitives"
+import Keyword from "./schemas/Keyword"
+import {BaseUnit, unitSchema} from "./schemas/units";
 
 const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
 	"advantages": Advantage,
 	"keywords": Keyword,
 	"spells": Spell,
-	"warcasters": Warcaster,
+	"cryx": BaseUnit,
 }
 
 /**
@@ -31,9 +31,18 @@ export const validate = (program: Command) => async (dataset: string) => {
 			
 			const module = await import(`../data/${schema}.json`)
 			
-			// This wraps the schemas for each file around a FileSchema assertion, ensuring that all files not only implement
-			// the required schema for each dataset, but also ensuring the file itself also has a valid schema.
-			FileSchema(schemas[schema]).parse(module.default)
+			// First we ensure that the file's structure matches the required format.
+			Dataset.parse(module.default)
+			
+			// Then we loop through each record and validate against the appropriate schema
+			for (const record of Object.values(module.default)) {
+				const result = parse(schema, record)
+				
+				if (!result.success) {
+					// @ts-ignore
+					throw new Error(`Invalid schema for ${record.name}: ${result.error.message}`)
+				}
+			}
 			
 			console.log(output.success(`Done.`))
 		}
@@ -82,4 +91,14 @@ export const build = (program: Command) => async () => {
 	fs.writeFileSync(`${buildDirectory}/appendix.json`, appendix)
 	
 	console.log(output.success('Done.'))
+}
+
+/**
+ * Our parse requirements get complex quick. If the base schema is a Unit, then first we want to work out what kind of unit it is. If we
+ * can determine a unit, then we'll use the returned Schema object, else we'll defer to Unit.
+ */
+const parse = (schema: string, record: any): SafeParseReturnType<any, any> => {
+	const parser = schemas[schema] === BaseUnit ? unitSchema(record as { type: string }) : schemas[schema]
+	
+	return parser.safeParse(record)
 }
