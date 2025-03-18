@@ -6,6 +6,7 @@ import Ability from "./schemas/Ability"
 import Advantage from "./schemas/Advantage"
 import Spell from "./schemas/Spell"
 import Warcaster from "./schemas/Warcaster"
+import {Base} from "./schemas/primitives";
 
 const schemas: { [key: string]: ZodObject<any> } = {
 	"abilities": Ability,
@@ -28,9 +29,7 @@ export const validate = (program: Command) => async (dataset: string) => {
 			
 			const module = await import(`../data/${schema}.json`)
 			
-			for (const [id, value] of Object.entries(module.default)) {
-				schemas[schema].parse(value)
-			}
+			Base(schemas[schema]).parse(module.default)
 			
 			console.log(output.success(`Done.`))
 		}

@@ -1,4 +1,7 @@
-import {z} from "zod";
+import {z, ZodObject} from "zod"
+
+// This schema is used to validate the core structure of the files that contain the required schema.
+export const Base = (schema: ZodObject<any>) => z.record(z.string(), schema)
 
 export const Advantage = z.enum([
 	"jackMarshal",
