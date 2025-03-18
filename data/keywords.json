@@ -1,0 +1,5 @@
+{
+	"additionalDie": "An additional die is a die added to the number of dice a model would ordinarily roll. A die roll can include multiple additional dice as long as each additional die comes from a different rule. A roll can be boosted and gain additional dice.",
+	"battlegroup": "A warcaster and the warjacks they control and a warlock and the warbeasts they control are collectively referred to as battlegroups.",
+	"cohort": "Warbeasts, warjacks, monstrosities, and horrors are collectively referred to as Cohort models. A rule affecting a \"Cohort model\" affects any of these model types."
+}

@@ -1,6 +1,5 @@
 import {z} from "zod"
-
-export const Range = z.union([z.number().positive(), z.literal("self")])
+import {Advantage, Faction, Feat, Range, Statistics} from "./schema-primitives"
 
 export const Ability = z.object({
 	name: z.string(),
@@ -20,4 +19,20 @@ export const Spell = z.object({
 		power: z.number().positive().optional(),
 		range: Range.optional(),
 	})
+})
+
+export const Unit = z.object({
+	advantages: z.array(Advantage),
+	baseSize: z.number().positive(),
+	faction: Faction,
+	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
+	keywords: z.array(z.string()),
+	name: z.string(),
+	statistics: Statistics,
+	type: z.enum(["attachment", "battleEngine", "solo", "structure", "unit", "warbeast", "warcaster", "warjack", "warlock"]),
+})
+
+export const Warcaster = Unit.extend({
+	feat: Feat,
+	spells: z.array(z.string()),
 })

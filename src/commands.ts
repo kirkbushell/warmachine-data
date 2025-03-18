@@ -1,4 +1,4 @@
-import {Ability, Spell} from "./schemas"
+import {Ability, Spell, Unit, Warcaster} from "./schemas"
 import {ZodObject} from "zod"
 import {Command} from "commander"
 import output from "./output"
@@ -6,7 +6,8 @@ import * as fs from "node:fs";
 
 const schemas: { [key: string]: ZodObject<any> } = {
 	"abilities": Ability,
-	"spells": Spell
+	"spells": Spell,
+	"warcasters": Warcaster,
 }
 
 /**

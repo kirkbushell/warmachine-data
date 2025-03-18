@@ -7,8 +7,14 @@
 			"pathfinder",
 			"undead"
 		],
-		"faction": "Necrofactorium",
-		"keywords": "cryx,necrofactorium,scout,warcaster",
+		"faction": "necrofactorium",
+		"fieldAllowance": "c",
+		"keywords": [
+			"cryx",
+			"necrofactorium",
+			"scout",
+			"warcaster"
+		],
 		"statistics": {
 			"arcana": 7,
 			"arcaneAttack": 7,
@@ -20,7 +26,7 @@
 			"meleeAttack": 6
 		},
 		"abilities": [
-			"fieldMarshal[retaliatoryStrike]",
+			"fieldMarshal-retaliatoryStrike",
 			"chopShop",
 			"repairable",
 			"repair",
