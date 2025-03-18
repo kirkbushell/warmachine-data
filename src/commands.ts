@@ -1,4 +1,4 @@
-import {ZodObject} from "zod"
+import {ZodObject, ZodType} from "zod"
 import {Command} from "commander"
 import output from "./output"
 import * as fs from "node:fs"
@@ -6,11 +6,13 @@ import Ability from "./schemas/Ability"
 import Advantage from "./schemas/Advantage"
 import Spell from "./schemas/Spell"
 import Warcaster from "./schemas/Warcaster"
-import {Base} from "./schemas/primitives";
+import {FileSchema} from "./schemas/primitives";
+import Keyword from "./schemas/Keyword";
 
-const schemas: { [key: string]: ZodObject<any> } = {
+const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
 	"advantages": Advantage,
+	"keywords": Keyword,
 	"spells": Spell,
 	"warcasters": Warcaster,
 }
@@ -29,7 +31,9 @@ export const validate = (program: Command) => async (dataset: string) => {
 			
 			const module = await import(`../data/${schema}.json`)
 			
-			Base(schemas[schema]).parse(module.default)
+			// This wraps the schemas for each file around a FileSchema assertion, ensuring that all files not only implement
+			// the required schema for each dataset, but also ensuring the file itself also has a valid schema.
+			FileSchema(schemas[schema]).parse(module.default)
 			
 			console.log(output.success(`Done.`))
 		}
