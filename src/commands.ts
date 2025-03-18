@@ -61,7 +61,7 @@ export const build = (program: Command) => async () => {
 	// First we validate - no point in building if the data files are incorrect
 	await validate(program)('all')
 	
-	process.stdout.write(output.info("Building appendix.json... "))
+	process.stdout.write(output.info("Building index.json... "))
 	
 	let map: { [key: string]: string } = {}
 	
@@ -90,7 +90,7 @@ export const build = (program: Command) => async () => {
 		fs.mkdirSync(buildDirectory)
 	}
 	
-	fs.writeFileSync(`${buildDirectory}/appendix.json`, appendix)
+	fs.writeFileSync(`${buildDirectory}/index.json`, appendix)
 	
 	console.log(output.success('Done.'))
 }
