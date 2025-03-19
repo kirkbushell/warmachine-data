@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Option = exports.Statistics = exports.Weapons = exports.Weapon = exports.WeaponType = exports.WeaponQuality = exports.Range = exports.Points = exports.Feat = exports.Faction = exports.Advantage = exports.Abilities = exports.Dataset = void 0;
+exports.Option = exports.Statistics = exports.Weapons = exports.Weapon = exports.WeaponType = exports.WeaponQuality = exports.Range = exports.Points = exports.Feat = exports.Faction = exports.ModelAdvantage = exports.Abilities = exports.Dataset = void 0;
 const zod_1 = require("zod");
 // This schema is used to validate the core structure of the files that contain the required schema.
 exports.Dataset = zod_1.z.record(zod_1.z.string(), zod_1.z.any());
 exports.Abilities = zod_1.z.array(zod_1.z.union([zod_1.z.string(), zod_1.z.array(zod_1.z.string())]));
-exports.Advantage = zod_1.z.enum([
+exports.ModelAdvantage = zod_1.z.enum([
     "jackMarshal",
     "advanceDeployment",
     "ambush",

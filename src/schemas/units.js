@@ -6,7 +6,7 @@ const primitives_1 = require("./primitives");
 const Record = zod_1.z.object({}).strict();
 exports.BaseUnit = Record.extend({
     abilities: primitives_1.Abilities,
-    advantages: zod_1.z.array(primitives_1.Advantage),
+    advantages: zod_1.z.array(primitives_1.ModelAdvantage),
     baseSize: zod_1.z.number().positive(),
     faction: primitives_1.Faction,
     fieldAllowance: zod_1.z.union([zod_1.z.number().positive(), zod_1.z.literal('c')]),
@@ -38,6 +38,9 @@ exports.Attachment = exports.BaseUnit.extend({
     points: primitives_1.Points,
     weapons: primitives_1.Weapons
 });
+/**
+ * A simple method to return the appropriate schema based on the data record provided.
+ */
 const unitSchema = (record) => {
     switch (record.type) {
         case 'attachment':
