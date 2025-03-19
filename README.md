@@ -132,7 +132,7 @@ npm run index
 This will loop over all data files, creating the appropriate references and writing it to build/index.json
 
 Note that this command is run automatically when you commit any changes to the codebase, ensuring the build file is
-always up to date with any changes made to the referenced JSON files.
+always up-to-date with any changes made to the referenced JSON files.
 
 # JSON files
 
@@ -142,12 +142,18 @@ keywords, abilities, weapons or spells (considering that many of these entries a
 allows for de-duplication as well as a way to potentially see what units use the same weapon qualities, spells or
 any other data.
 
-## Units
+## Factions
 
-data/units.json represents the core of the warmachine unit catalog for Warmachine. Note that Legacy is not currently
-included in this dataset, due to how much data is present there. However, should players wish to support Legacy,
-this could be managed through community pull requests and the code updated to support the Legacy factions. If there
-is enough support, the project has been built in such a way to easily support that requirement, should it be needed.
+data/*.json such as cryx.json, khador.json.etc. represents the core of the warmachine unit catalog for Warmachine,
+broken up by faction. Note that Legacy is not currently included in this dataset, due to how much data is present there.
+However, should players wish to support Legacy, this could be managed through community pull requests and the code
+updated to support the Legacy factions. If there is enough support, the project has been built in such a way to easily
+support that requirement, should it be needed.
 
-The units.json file consists of all units within the game (Prime), as well as references to weapons.json, abilities.
+The various json files consists of all units within the game (Prime), as well as references to weapons.json, abilities.
 json and other files.
+
+## Keywords
+
+Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These
+are covered within the keywords.json file.
