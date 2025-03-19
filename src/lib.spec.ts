@@ -28,3 +28,11 @@ test("fulltext option can be used to replace keywords and placeholders with thei
 	expect(result).not.toContain("{reposition-3}")
 	expect(result).toContain('Reposition [3"]')
 })
+
+test("fulltext option can be used to replace keywords with their associated ability text", async () => {
+	const content = "Let's handle {fieldMarshal-gang}"
+	const result = await fullText(content)
+	
+	expect(result).not.toContain("{fieldMarshal-gang}")
+	expect(result).toContain('Field Marshal [Gang]')
+})

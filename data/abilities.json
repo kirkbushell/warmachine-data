@@ -90,8 +90,8 @@
 		"type": "passive"
 	},
 	"fieldMarshal": {
-		"name": "Field Marshal [X]",
-		"rules": "Cohort models in this model's battlegroup gain [X].",
+		"name": "Field Marshal [$1]",
+		"rules": "Cohort models in this model's battlegroup gain [$1].",
 		"type": "passive"
 	},
 	"gang": {

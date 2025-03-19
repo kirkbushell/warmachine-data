@@ -43,17 +43,24 @@ export const file = async (file: string): Promise<Dataset> => await import(`../d
  */
 export const fullText = (content: string): Promise<string> => {
 	const expression = /\{([a-z]+)(-([a-z0-9]+))*}/ig
+	
 	// @ts-ignore: Ignoring as variadic arguments here is rather important for this logic to work...
 	const replacer = async (...args): string => {
+		// The even index matches aren't values we're interested in, so we grab only the odd index elements.
 		args = oddKeys(args)
 		
-		// if args[3] is numeric, it's a variable, if it's a string, it's a reference to another ability
-		const key: string = args.shift()!
-		const name = (await find(key)).name
+		// if args[3] is numeric, it's a static value, if it's a string, it's a reference to another ability or keyword.
+		args = await Promise.all(args.map(async (arg) => isNaN(arg) ? (await find(arg)).name : arg))
+		// console.log(args)
+		const name: string = args.shift()!
 		
-		if (args.length === 0) return name
-		
-		return name.replace(/\$([0-9])/, (...matches) => args[matches[1] - 1])
+		return name.replace(/\$([0-9])/, (...matches): string => {
+			return args[matches[1] - 1]
+		})
+		// 	console.log(matches)
+		// 	if (isNaN(matches[1])) return replaceSync(matches[1], '')
+		// 	return args[matches[1] - 1]
+		// })
 	}
 	
 	return replaceAsync(content, expression, replacer)

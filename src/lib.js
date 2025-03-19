@@ -75,13 +75,19 @@ const fullText = (content) => {
     const expression = /\{([a-z]+)(-([a-z0-9]+))*}/ig;
     // @ts-ignore: Ignoring as variadic arguments here is rather important for this logic to work...
     const replacer = async (...args) => {
+        // The even index matches aren't values we're interested in, so we grab only the odd index elements.
         args = oddKeys(args);
-        // if args[3] is numeric, it's a variable, if it's a string, it's a reference to another ability
-        const key = args.shift();
-        const name = (await (0, exports.find)(key)).name;
-        if (args.length === 0)
-            return name;
-        return name.replace(/\$([0-9])/, (...matches) => args[matches[1] - 1]);
+        // if args[3] is numeric, it's a static value, if it's a string, it's a reference to another ability or keyword.
+        args = await Promise.all(args.map(async (arg) => isNaN(arg) ? (await (0, exports.find)(arg)).name : arg));
+        // console.log(args)
+        const name = args.shift();
+        return name.replace(/\$([0-9])/, (...matches) => {
+            return args[matches[1] - 1];
+        });
+        // 	console.log(matches)
+        // 	if (isNaN(matches[1])) return replaceSync(matches[1], '')
+        // 	return args[matches[1] - 1]
+        // })
     };
     return replaceAsync(content, expression, replacer);
 };
