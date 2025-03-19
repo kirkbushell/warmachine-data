@@ -171,8 +171,8 @@
 		"type": "passive"
 	},
 	"reposition": {
-		"name": "Reposition [X\"]",
-		"rules": "At the end of a model/unit with Reposition [X\"]'s activation, it can advance up to X\", then its activation ends.",
+		"name": "Reposition [$1\"]",
+		"rules": "At the end of a model/unit with Reposition [$\"]'s activation, it can advance up to $\", then its activation ends.",
 		"type": "passive"
 	},
 	"retaliatoryStrike": {

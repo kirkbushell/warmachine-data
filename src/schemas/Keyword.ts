@@ -1,3 +1,6 @@
 import {z} from "zod"
 
-export default z.string()
+export default z.object({
+	name: z.string(),
+	rules: z.string(),
+})

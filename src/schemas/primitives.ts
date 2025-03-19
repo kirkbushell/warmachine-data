@@ -5,7 +5,7 @@ export const Dataset = z.record(z.string(), z.any())
 
 export const Abilities = z.array(z.union([z.string(), z.array(z.string())]))
 
-export const Advantage = z.enum([
+export const ModelAdvantage = z.enum([
 	"jackMarshal",
 	"advanceDeployment",
 	"ambush",

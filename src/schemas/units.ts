@@ -1,11 +1,11 @@
 import {z, ZodType} from "zod"
-import {Abilities, Advantage, Faction, Feat, Option, Points, Statistics, Weapons} from "./primitives"
+import {Abilities, ModelAdvantage, Faction, Feat, Option, Points, Statistics, Weapons} from "./primitives"
 
 const Record = z.object({}).strict()
 
 export const BaseUnit = Record.extend({
 	abilities: Abilities,
-	advantages: z.array(Advantage),
+	advantages: z.array(ModelAdvantage),
 	baseSize: z.number().positive(),
 	faction: Faction,
 	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
@@ -43,6 +43,9 @@ export const Attachment = BaseUnit.extend({
 	weapons: Weapons
 })
 
+/**
+ * A simple method to return the appropriate schema based on the data record provided.
+ */
 export const unitSchema = (record: { type: string }): ZodType => {
 	switch (record.type) {
 		case 'attachment':

@@ -1,9 +1,30 @@
 {
-	"additionalDie": "An additional die is a die added to the number of dice a model would ordinarily roll. A die roll can include multiple additional dice as long as each additional die comes from a different rule. A roll can be {boost}ed and gain additional dice.",
-	"battlegroup": "A warcaster and the warjacks they control and a warlock and the warbeasts they control are collectively referred to as battlegroups.",
-	"blind": "A model suffering Blind cannot make ranged or magic attacks, suffers -4 MAT and DEF, and cannot run, charge, or make slam or trample power attacks. It must forfeit either its Normal Movement or Combat Action during its next activation. Blind can be {shaken}.",
-	"boost": "Boosting a roll allows you to roll one extra die. If a model has a rule that gives it the option to boost a roll, you must declare it is boosting before rolling any dice for the roll. Each attack or damage roll can be boosted only once, but a model can boost multiple, different rolls during its activation. When an attack affects several models, the attack and damage rolls against each individual model must be boosted separately.",
-	"cohort": "Warbeasts, warjacks, monstrosities, and horrors are collectively referred to as Cohort models. A rule affecting a \"Cohort model\" affects any of these model types.",
-	"shadowBind": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be {shaken}.",
-	"shaken": "An effect that is shakeable can be shaken by spending 1 focus or fury point. If the model is knocked down, stationary, or is suffering an effect like {blind} or {shadowBind}, that effect expires. Note that only one of these shakeable effects can be expired per focus/fury point."
+	"additionalDie": {
+		"name": "additional die",
+		"rules": "An additional die is a die added to the number of dice a model would ordinarily roll. A die roll can include multiple additional dice as long as each additional die comes from a different rule. A roll can be {boost}ed and gain additional dice."
+	},
+	"battlegroup": {
+		"name": "battlegroup",
+		"rules": "A warcaster and the warjacks they control and a warlock and the warbeasts they control are collectively referred to as battlegroups."
+	},
+	"blind": {
+		"name": "Blind",
+		"rules": "A model suffering Blind cannot make ranged or magic attacks, suffers -4 MAT and DEF, and cannot run, charge, or make slam or trample power attacks. It must forfeit either its Normal Movement or Combat Action during its next activation. Blind can be {shaken}."
+	},
+	"boost": {
+		"name": "boost",
+		"rules": "Boosting a roll allows you to roll one extra die. If a model has a rule that gives it the option to boost a roll, you must declare it is boosting before rolling any dice for the roll. Each attack or damage roll can be boosted only once, but a model can boost multiple, different rolls during its activation. When an attack affects several models, the attack and damage rolls against each individual model must be boosted separately."
+	},
+	"cohort": {
+		"name": "Cohort",
+		"rules": "Warbeasts, warjacks, monstrosities, and horrors are collectively referred to as Cohort models. A rule affecting a \"Cohort model\" affects any of these model types."
+	},
+	"shadowBind": {
+		"name": "Shadow Bind",
+		"rules": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be {shaken}."
+	},
+	"shaken": {
+		"name": "shaken",
+		"rules": "An effect that is shakeable can be shaken by spending 1 focus or fury point. If the model is knocked down, stationary, or is suffering an effect like {blind} or {shadowBind}, that effect expires. Note that only one of these shakeable effects can be expired per focus/fury point."
+	}
 }

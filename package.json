@@ -2,23 +2,24 @@
 	"name": "warmachine-data",
 	"type": "module",
 	"version": "0.0.1",
-	"description": "A repository of data pertaining to the Warmachine tabletop game. Usable and freely available to all community projects.",
+	"description": "A repository of data and supportive libraries pertaining to the Warmachine tabletop game. Usable and freely available to all community projects.",
 	"main": "index.js",
 	"scripts": {
 		"validate": "npx tsx src/data.ts validate",
-		"build": "npx tsx src/data.ts build",
-		"prepare": "husky"
+		"build": "npx tsx src/data.ts build && tsc -p ./tsconfig.json",
+		"prepack": "npm run build",
+		"prepare": "husky",
+		"test": "vitest"
 	},
 	"author": "Kirk Bushell",
 	"license": "MIT",
-	"dependencies": {
+	"devDependencies": {
 		"@types/node": "^22.13.10",
 		"commander": "^13.1.0",
+		"husky": "^9.1.7",
 		"tsx": "^4.19.3",
 		"typescript": "^5.8.2",
+		"vitest": "^3.0.9",
 		"zod": "^3.24.2"
-	},
-	"devDependencies": {
-		"husky": "^9.1.7"
 	}
 }
