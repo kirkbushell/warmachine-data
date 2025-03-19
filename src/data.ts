@@ -18,8 +18,8 @@ program.command("validate")
 	.argument("[dataset]", "Which dataset do you want to validate? Eg. abilities", "all")
 	.action(validate(program))
 
-program.command("build")
-	.description("Build the appendix.json file based on the available data files")
+program.command("index")
+	.description("Build the index.json file based on the available data files.")
 	.action(build(program))
 
 program.parse()

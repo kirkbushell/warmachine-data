@@ -126,7 +126,7 @@ The index is as the name suggests: an index of all entries and where they can be
 In order to build the index, you can call the following command:
 
 ```
-npm run build
+npm run index
 ```
 
 This will loop over all data files, creating the appropriate references and writing it to build/index.json

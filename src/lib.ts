@@ -51,16 +51,10 @@ export const fullText = (content: string): Promise<string> => {
 		
 		// if args[3] is numeric, it's a static value, if it's a string, it's a reference to another ability or keyword.
 		args = await Promise.all(args.map(async (arg) => isNaN(arg) ? (await find(arg)).name : arg))
-		// console.log(args)
+		
 		const name: string = args.shift()!
 		
-		return name.replace(/\$([0-9])/, (...matches): string => {
-			return args[matches[1] - 1]
-		})
-		// 	console.log(matches)
-		// 	if (isNaN(matches[1])) return replaceSync(matches[1], '')
-		// 	return args[matches[1] - 1]
-		// })
+		return name.replace(/\$([0-9])/, (...matches): string => args[matches[1] - 1])
 	}
 	
 	return replaceAsync(content, expression, replacer)
