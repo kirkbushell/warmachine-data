@@ -10,14 +10,14 @@
 		"data",
 		"library"
 	],
-	"main": "dist/src/index.js",
-	"module": "dist/src/index.mjs",
-	"types": "dist/src/types.d.ts",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/types.d.ts",
 	"scripts": {
 		"clean": "del-cli ./dist",
 		"validate": "npx tsx src/data.ts validate",
 		"index": "npx tsx src/data.ts index",
-		"build": "npm run index && npm run clean && tsc -p ./tsconfig.json",
+		"build": "npm run index && tsup",
 		"prepack": "npm run build",
 		"prepare": "husky",
 		"test": "vitest"
@@ -27,6 +27,7 @@
 		"commander": "^13.1.0",
 		"del-cli": "^6.0.0",
 		"husky": "^9.1.7",
+		"tsup": "^8.4.0",
 		"tsx": "^4.19.3",
 		"typescript": "^5.8.2",
 		"vitest": "^3.0.9",

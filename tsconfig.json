@@ -4,6 +4,9 @@
 		"module": "commonjs",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"declaration": true,
 		"outDir": "dist",
 		"resolveJsonModule": true,
 		"strict": true,
@@ -16,5 +19,5 @@
 	"exclude": [
 		"**/*.spec.ts"
 	],
-	"types": "./src/types.d.ts"
+	"types": "./src/types.ts"
 }
