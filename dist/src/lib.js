@@ -61,7 +61,7 @@ exports.find = find;
 /**
  * Retrieves the index file's JSON object.
  */
-const index = async () => await Promise.resolve().then(() => __importStar(require("../build/index.json")));
+const index = async () => await Promise.resolve().then(() => __importStar(require("../data/index.json")));
 exports.index = index;
 /**
  * Retrieves a specific file from with the data folder.

@@ -31,7 +31,7 @@ export const find = async (keyword: string) => {
 /**
  * Retrieves the index file's JSON object.
  */
-export const index = async (): Promise<Dataset> => await import("../build/index.json")
+export const index = async (): Promise<Dataset> => await import("../data/index.json")
 
 /**
  * Retrieves a specific file from with the data folder.

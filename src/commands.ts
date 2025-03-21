@@ -57,7 +57,7 @@ export const validate = (program: Command) => async (dataset: string) => {
  * Builds the appendix.json file. To do this, it loops through all data files, pulls out the key and then creates a map of key -> data file. This allows
  * fast lookups of required records in the data files, and will error if non-unique values are found.
  */
-export const build = (program: Command) => async () => {
+export const index = (program: Command) => async () => {
 	// First we validate - no point in building if the data files are incorrect
 	await validate(program)('all')
 	
@@ -84,7 +84,7 @@ export const build = (program: Command) => async () => {
 		}, {}
 	), null, 4)
 	
-	const buildDirectory = process.cwd() + '/build'
+	const buildDirectory = process.cwd() + '/data'
 	
 	if (!fs.existsSync(buildDirectory)) {
 		fs.mkdirSync(buildDirectory)

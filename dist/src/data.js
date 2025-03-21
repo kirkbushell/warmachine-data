@@ -20,5 +20,5 @@ program.command("validate")
     .action((0, commands_1.validate)(program));
 program.command("index")
     .description("Build the index.json file based on the available data files.")
-    .action((0, commands_1.build)(program));
+    .action((0, commands_1.index)(program));
 program.parse();

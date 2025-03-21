@@ -1,9 +1,18 @@
 {
 	"name": "warmachine-data",
+	"author": "Kirk Bushell",
+	"license": "MIT",
 	"type": "module",
 	"version": "0.0.1",
 	"description": "A repository of data and supportive libraries pertaining to the Warmachine tabletop game. Usable and freely available to all community projects.",
-	"main": "index.js",
+	"keywords": [
+		"warmachine",
+		"data",
+		"library"
+	],
+	"main": "dist/src/index.js",
+	"module": "dist/src/index.mjs",
+	"types": "dist/src/types.d.ts",
 	"scripts": {
 		"clean": "del-cli ./dist",
 		"validate": "npx tsx src/data.ts validate",
@@ -13,8 +22,6 @@
 		"prepare": "husky",
 		"test": "vitest"
 	},
-	"author": "Kirk Bushell",
-	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^22.13.10",
 		"commander": "^13.1.0",

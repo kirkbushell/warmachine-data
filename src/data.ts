@@ -1,5 +1,5 @@
 import {Command} from "commander"
-import {build, validate} from "./commands"
+import {index, validate} from "./commands"
 import output from "./output"
 
 const program = new Command
@@ -20,6 +20,6 @@ program.command("validate")
 
 program.command("index")
 	.description("Build the index.json file based on the available data files.")
-	.action(build(program))
+	.action(index(program))
 
 program.parse()

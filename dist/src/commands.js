@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.build = exports.validate = void 0;
+exports.index = exports.validate = void 0;
 const output_1 = __importDefault(require("./output"));
 const fs = __importStar(require("node:fs"));
 const Ability_1 = __importDefault(require("./schemas/Ability"));
@@ -87,7 +87,7 @@ exports.validate = validate;
  * Builds the appendix.json file. To do this, it loops through all data files, pulls out the key and then creates a map of key -> data file. This allows
  * fast lookups of required records in the data files, and will error if non-unique values are found.
  */
-const build = (program) => async () => {
+const index = (program) => async () => {
     // First we validate - no point in building if the data files are incorrect
     await (0, exports.validate)(program)('all');
     process.stdout.write(output_1.default.info("Building index.json... "));
@@ -105,14 +105,14 @@ const build = (program) => async () => {
         obj[key] = map[key];
         return obj;
     }, {}), null, 4);
-    const buildDirectory = process.cwd() + '/build';
+    const buildDirectory = process.cwd() + '/data';
     if (!fs.existsSync(buildDirectory)) {
         fs.mkdirSync(buildDirectory);
     }
     fs.writeFileSync(`${buildDirectory}/index.json`, appendix);
     console.log(output_1.default.success('Done.'));
 };
-exports.build = build;
+exports.index = index;
 /**
  * Our parse requirements get complex quick. If the base schema is a Unit, then first we want to work out what kind of unit it is. If we
  * can determine a unit, then we'll use the returned Schema object, else we'll defer to Unit.
