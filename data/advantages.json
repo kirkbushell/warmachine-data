@@ -5,7 +5,7 @@
 	},
 	"advanceDeployment": {
 		"name": "Advance Deployment",
-		"rules": "In most scenarios, this mokdel can be depoyed after normal deployment, up to 3\" beyond the established deployment zone."
+		"rules": "In most scenarios, this model can be deployed after normal deployment, up to 3\" beyond the established deployment zone."
 	},
 	"ambush": {
 		"name": "Ambush",
@@ -21,7 +21,7 @@
 	},
 	"assault": {
 		"name": "Assault",
-		"rules": "This model can make an Assault ranged attack."
+		"rules": "This model can make an assault ranged attack."
 	},
 	"cavalry": {
 		"name": "Cavalry",
