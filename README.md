@@ -45,8 +45,8 @@ object representing 1 or more properties, with name being a required field of al
 
 ## References
 
-Most entries have one or more references to other entries, rules or hints. In order to ensure these references are
-available, the following syntax is required to be used when such keywords are present:
+Most entries have one or more references to other entries, such as rules, keywords, units, spells.etc. In order to
+ensure these references are available, the following syntax is required to be used when such keywords are present:
 
 ```json
 {
@@ -59,8 +59,8 @@ available, the following syntax is required to be used when such keywords are pr
 ```
 
 Here we see that the ability, "Special Orders" provides the Reposition ability to a target model/unit. A reference
-to reposition is provided, and because the number of inches is an argument required by the ability, we use the syntax:
-{ability-value} to reference the ability and pass it the required value. If we then look at the Reposition
+to reposition is therefore needed, and because the number of inches is an argument required by the ability, we use the
+syntax: {ability-value} to reference the ability and pass it the required value. If we then look at the Reposition
 ability:
 
 ```
