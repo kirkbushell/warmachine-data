@@ -36,3 +36,13 @@ test("fulltext option can be used to replace keywords with their associated abil
 	expect(result).not.toContain("{fieldMarshal-gang}")
 	expect(result).toContain('Field Marshal [Gang]')
 })
+
+test("fulltext can replace multiple keywords with their text", async () => {
+	const content = "Let's handle {blessed} and {stealth}"
+	const result = await fullText(content)
+	
+	expect(result).not.toContain("{blessed}")
+	expect(result).not.toContain("{stealth}")
+	expect(result).toContain('Blessed')
+	expect(result).toContain('Stealth')
+})
