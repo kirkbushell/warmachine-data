@@ -116,7 +116,8 @@ console.log(index.fieldMarshal) // This will return: abilities, a reference to d
 You can then use this returned value to import the appropriate json file:
 
 ```typescript
-const record = await import("data/abilities.json")
+const dataset = index.fieldMarshal
+const record = await import(`data/${dataset}.json`)
 
 console.log(record.name) // "Field Marshal"
 ```
@@ -157,3 +158,49 @@ json and other files.
 
 Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These
 are covered within the keywords.json file.
+
+# Utility functions
+
+The project also comes with some provided functions for projects that want an easy way to look-up and use the data
+within the JSON files. First, install the package with:
+
+```console
+npm i -D warmachine-data
+```
+
+## entry
+
+The entry function is a low-level function where the required dataset must be known. Once provided, entry returns
+the full entry of the required record.
+
+```typescript
+import {entry} from "warmachine-data"
+
+const result = await entry('ironLichCommander', 'cryx')
+```
+
+## find
+
+If you're not sure where to find an entry, use the find function. This will lookup the ID in the index and fetch the
+appropriate entry.
+
+```typescript
+import {find} from "warmachine-data"
+
+const result = await find('ironLichCommander')
+```
+
+You must lookup the item using its ID. The ID represents a camelCase representation of the record, except for warcasters
+or warlocks which use their character ID, ie. eviscerus1
+
+## index
+
+Retrieve all entries from the index using this function. This will return an object of key->value pairs, where the
+key is the entry's ID, and the value is a reference to the dataset.
+
+```typescript
+import {index} from "warmachine-data"
+
+const result = await index()
+```
+
