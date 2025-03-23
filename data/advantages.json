@@ -67,6 +67,10 @@
 		"name": "Pathfinder",
 		"rules": "This model treats rough terrain as open terrain while advancing. While charging, slam power attacking, or trample power attacking, this model does not stop its movement when it contacts an obstacle."
 	},
+	"resistanceElectricity": {
+		"name": "Resistance: Electricity",
+		"rules": "When this model suffers an electrical damage roll, remove one die from the damage roll. Additionally, when lightning arcs as a result of a special rule, ignore models with Resistance: Electricity when determining which model the lightning arcs to. Lightning cannot arc from a model with Resistance: Electricity."
+	},
 	"slamPowerAttack": {
 		"name": "Slam Power Attack",
 		"rules": "This model can make Slam power attacks."

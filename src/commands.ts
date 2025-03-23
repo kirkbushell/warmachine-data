@@ -17,6 +17,7 @@ const schemas: { [key: string]: ZodType } = {
 	"keywords": Keyword,
 	"spells": Spell,
 	"cryx": BaseUnit,
+	"cygnar": BaseUnit,
 }
 
 /**

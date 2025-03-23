@@ -9,6 +9,17 @@
 		},
 		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
 	},
+	"avengingForce": {
+		"name": "Avenging Force",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 2,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "If one or more friendly Faction warrior models were damaged by enemy attacks while in the spellcaster's control range during your opponent's last turn, during your Maintenance Phase one model in the spellcaster's battlegroup in its control range can advance 3\" and make one basic attack."
+	},
 	"breathStealer": {
 		"name": "Breath Stealer",
 		"statistics": {
@@ -28,6 +39,17 @@
 			"range": 10
 		},
 		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
+	},
+	"crusadersCall": {
+		"name": "Crusader's Call",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 3,
+			"duration": "turn",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Friendly Faction models beginning a charge in the spellcaster's control range gain +2 SPD. Crusader's Call lasts for one turn."
 	},
 	"deceleration": {
 		"name": "Deceleration",
@@ -59,6 +81,15 @@
 		},
 		"rules": "The spellcaster and friendly Faction models beginning their activations in its control range gain {relentlessCharge} for one turn."
 	},
+	"openFire": {
+		"name": "Open Fire",
+		"statistics": {
+			"cost": 1,
+			"offensive": false,
+			"range": "controlRange"
+		},
+		"rules": "Target cohort model in this model's battlegroup that is in its control range can immediately make one basic range attack. A model can be targeted by Open Fire only once per turn."
+	},
 	"redline": {
 		"name": "Redline",
 		"statistics": {
@@ -68,6 +99,17 @@
 			"range": 6
 		},
 		"rules": "Target warjack in the spellcaster's battlegroup gains +2 SPD and can run, charge, or make slam or trample power attacks without spending focus. Additionally, the affected model gains +2 to its melee attack damage rolls and collateral damage rolls. At the end of each of its activations, the affected warjack suffers d3 damage points."
+	},
+	"rhythmOfWar": {
+		"name": "Rhythm of War",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 3,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Warjacks in this model's battlegroup that are in its control range can advance up to 3\" after all friendly models have ended their activations on your turn."
 	},
 	"shadowmancer": {
 		"name": "Shadowmancer",

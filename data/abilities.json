@@ -44,10 +44,20 @@
 		"rules": "If this attack boxes a living or undead model, this model can gain Incorporeal for one round.",
 		"type": "weapon"
 	},
+	"brutalCharge": {
+		"name": "Brutal Charge",
+		"rules": "This model gains +2 to charge attack damage rolls with this weapon.",
+		"type": "weapon"
+	},
 	"chopShop": {
 		"name": "Chop Shop",
 		"rules": "When a model in this model's battlegroup destroyed an enemy construct model with a melee attack, remove d3 + 1 damage points from model in this model's battlegroup currently in its control range and remove the destroyed model from play.",
 		"type": "passive"
+	},
+	"criticalCortexDamage": {
+		"name": "Critical Cortex Damage",
+		"rules": "On a critical hit on a warjack, the warjack suffers 1 damage to its first available Cortex system box.",
+		"type": "weapon"
 	},
 	"darkDomination": {
 		"name": "Dark Domination",
@@ -63,6 +73,11 @@
 		"name": "Death Toll [Mechanithrall]",
 		"rules": "When this weapon boxes a living enemy warrior model, remove that model from play and return one Grunt to a small-based Mechanithrall unit within 8\" of this model. Place the Grunt with 2\" of another model in that unit. The Grunt must forfeit its Normal Movement and Combat Action the turn it is put into play.",
 		"type": "weapon"
+	},
+	"defenceFormation": {
+		"name": "Defense Formation",
+		"rules": "While in this model's control range and B2B with one or more models in its battlegroup, model's battlegroup with an extra-large base or smaller gain +2 ARM and cannot become knocked down.",
+		"type": "passive"
 	},
 	"digIn": {
 		"name": "Dig In",
@@ -144,6 +159,11 @@
 		"rules": "RNG 1. Target friendly undead Faction model. If the model is in range, remove d3+1 damage points from it.",
 		"type": "action"
 	},
+	"polarityField": {
+		"name": "Polarity Field",
+		"rules": "This model cannot be targeted by a charge or slam power attack made by a construct model.",
+		"type": "passive"
+	},
 	"poltergeist": {
 		"name": "Poltergeist",
 		"rules": "When an enemy model misses this model with an attack, immediately after the attack is resolved you can choose to push the enemy d3\" directly away from this model.",
@@ -178,6 +198,11 @@
 	"retaliatoryStrike": {
 		"name": "Retaliatory Strike",
 		"rules": "If a model with Retaliatory Strike is hit by an enemy melee attack during your opponent's turn, after that attack is resolved the model with Retaliatory Strike can immediately make one basic melee attack against the attacking model. A model can make only one Retaliatory Strike per turn.",
+		"type": "passive"
+	},
+	"riposte": {
+		"name": "Riposte",
+		"rules": "When a model with Riposte is missed by an enemy melee attack, immediately after the attack is resolved the model with Riposte can make one basic melee attack against the attacking model.",
 		"type": "passive"
 	},
 	"soulTakerCullSoul": {

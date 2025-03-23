@@ -40,6 +40,7 @@ export const ModelAdvantage = z.enum([
 
 export const Faction = z.enum([
 	"necrofactorium",
+	"Storm Legion",
 ])
 
 export const Feat = z.record(z.string(), z.object({
@@ -49,7 +50,7 @@ export const Feat = z.record(z.string(), z.object({
 
 export const Points = z.number().positive()
 
-export const Range = z.union([z.number().positive(), z.literal("self")])
+export const Range = z.union([z.number().positive(), z.literal("self"), z.literal("controlRange")])
 
 export const WeaponQuality = z.enum([
 	"blessed",

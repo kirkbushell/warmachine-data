@@ -1,0 +1,166 @@
+{
+    "diBaro1": {
+        "abilities": [
+			"defenseFormation",
+			"polarityField"
+		],
+		"advantages": [
+			"dualAttack",
+			"resistanceElectricity"
+		],
+		"baseSize": 30,
+		"faction": "Storm Legion",
+		"feat": {
+			"weatheringTheStorm": {
+				"name": "Weathering the Storm",
+				"rules": "While in di Baro's control range, friendly models gain one additional dice on their attack rolls. When resolving a friendly model's roll, discard the lowest die rolled. While in di Baro's control range, enemy models gain one additional dice on their attack rolls and damage rolls. When resolving an enemy model's roll, discard the highest die roll. Wheathering the Storm lasts for one round."
+			}
+		},
+		"fieldAllowance": "c",
+		"keywords": [
+			"cygnar",
+			"scout",
+            "stormLegion",
+			"warcaster"
+		],
+		"name": "Captain Athena di Baro",
+		"rackSlots": 2,
+		"spells": [
+			"avengingForce",
+			"openFire"
+		],
+		"statistics": {
+			"arcana": 6,
+			"arcaneAttack": 6,
+			"armour": 17,
+			"controlRange": 14,
+			"defense": 14,
+			"health": 17,
+			"meleeAttack": 6,
+			"rangeAttack": 6,
+			"speed": 6
+		},
+		"type": "warcaster",
+		"weapons": {
+			"electricalDischarge": {
+				"abilities": [
+					"criticalCortexDamage"
+				],
+				"name": "Electrical Discharge",
+				"qualities": [
+					"damageTypeElectricity",
+                    "pistol"
+				],
+				"quantity": 1,
+				"statistics": {
+					"power": 12,
+					"range": "Spray 8",
+                    "rateOfFire": "1"
+				},
+				"type": "ranged"
+			},
+			"galvanicShield": {
+				"name": "Galvanic Shield",
+				"quantity": 1,
+				"statistics": {
+					"power": 12,
+					"range": 1
+				},
+				"type": "melee"
+			},
+			"lightningSpear": {
+				"abilities": [
+					"criticalCortexDamage"
+				],
+				"name": "Lightning Spear",
+				"qualities": [
+					"damageTypeMagical"
+				],
+				"quantity": 1,
+				"statistics": {
+					"power": 14,
+					"range": 2
+				},
+				"type": "melee"
+			}
+		}
+    },
+    "calder1": {
+        "abilities": [
+			"birdsEye",
+			"dodge",
+            "reposition"
+		],
+		"advantages": [
+            "cavalry",
+			"dualAttack",
+            "pathfinder",
+			"resistanceElectricity",
+            "unstoppable"
+		],
+		"baseSize": 50,
+		"faction": "Storm Legion",
+		"feat": {
+			"rideTheStorm": {
+				"name": "Ride the Storm",
+				"rules": "While in Calder's control range, friendly Faction models gain +2 DEF. Additionally, while in her control range models in Calder's battlegroup gain {dodge} and {riposte}. (When a model with Riposte is missed by an enemy melee attack, immediately after the attack is resolved the model with Riposte can make one basic melee attack against the attacking model.)"
+			}
+		},
+		"fieldAllowance": "c",
+		"keywords": [
+			"cygnar",
+            "stormLegion",
+			"warcaster"
+		],
+		"name": "Captain Madison Calder",
+		"rackSlots": 3,
+		"spells": [
+			"crusadersCall",
+			"rythmOfWar"
+		],
+		"statistics": {
+			"arcana": 7,
+			"arcaneAttack": 6,
+			"armour": 17,
+			"controlRange": 14,
+			"defense": 15,
+			"health": 17,
+			"meleeAttack": 6,
+			"rangeAttack": 7,
+			"speed": 8
+		},
+		"type": "warcaster",
+		"weapons": {
+			"electroPulse": {
+				"name": "Electro Pulse",
+				"qualities": [
+					"damageTypeElectricity",
+                    "pistol"
+				],
+				"quantity": 1,
+				"statistics": {
+					"power": 12,
+					"range": 10,
+                    "rateOfFire": "1"
+				},
+				"type": "ranged"
+			},
+			"pulseSword": {
+				"abilities": [
+					"brutalCharge",
+					"criticalCortexDamage"
+				],
+				"name": "Pulse Sword",
+				"qualities": [
+					"damageTypeMagical"
+				],
+				"quantity": 1,
+				"statistics": {
+					"power": 14,
+					"range": 1
+				},
+				"type": "melee"
+			}
+		}
+    }
+}
