@@ -45,8 +45,8 @@ object representing 1 or more properties, with name being a required field of al
 
 ## References
 
-Most entries have one or more references to other entries, rules or hints. In order to ensure these references are
-available, the following syntax is required to be used when such keywords are present:
+Most entries have one or more references to other entries, such as rules, keywords, units, spells.etc. In order to
+ensure these references are available, the following syntax is required to be used when such keywords are present:
 
 ```json
 {
@@ -59,8 +59,8 @@ available, the following syntax is required to be used when such keywords are pr
 ```
 
 Here we see that the ability, "Special Orders" provides the Reposition ability to a target model/unit. A reference
-to reposition is provided, and because the number of inches is an argument required by the ability, we use the syntax:
-{ability-value} to reference the ability and pass it the required value. If we then look at the Reposition
+to reposition is therefore needed, and because the number of inches is an argument required by the ability, we use the
+syntax: {ability-value} to reference the ability and pass it the required value. If we then look at the Reposition
 ability:
 
 ```
@@ -116,7 +116,8 @@ console.log(index.fieldMarshal) // This will return: abilities, a reference to d
 You can then use this returned value to import the appropriate json file:
 
 ```typescript
-const record = await import("data/abilities.json")
+const dataset = index.fieldMarshal
+const record = await import(`data/${dataset}.json`)
 
 console.log(record.name) // "Field Marshal"
 ```
@@ -157,3 +158,49 @@ json and other files.
 
 Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These
 are covered within the keywords.json file.
+
+# Utility functions
+
+The project also comes with some provided functions for projects that want an easy way to look-up and use the data
+within the JSON files. First, install the package with:
+
+```console
+npm i -D warmachine-data
+```
+
+## entry
+
+The entry function is a low-level function where the required dataset must be known. Once provided, entry returns
+the full entry of the required record.
+
+```typescript
+import {entry} from "warmachine-data"
+
+const result = await entry('ironLichCommander', 'cryx')
+```
+
+## find
+
+If you're not sure where to find an entry, use the find function. This will lookup the ID in the index and fetch the
+appropriate entry.
+
+```typescript
+import {find} from "warmachine-data"
+
+const result = await find('ironLichCommander')
+```
+
+You must lookup the item using its ID. The ID represents a camelCase representation of the record, except for warcasters
+or warlocks which use their character ID, ie. eviscerus1
+
+## index
+
+Retrieve all entries from the index using this function. This will return an object of key->value pairs, where the
+key is the entry's ID, and the value is a reference to the dataset.
+
+```typescript
+import {index} from "warmachine-data"
+
+const result = await index()
+```
+

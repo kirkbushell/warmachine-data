@@ -91,9 +91,9 @@
 		"name": "Lich Lord Dekathus",
 		"rackSlots": 2,
 		"spells": [
-			"carrionFeast",
-			"deceleration",
-			"redline"
+			"annihilation",
+			"impendingDoom",
+			"shadowmancer"
 		],
 		"statistics": {
 			"arcana": 7,

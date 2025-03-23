@@ -9,12 +9,14 @@ import {Dataset} from "./schemas/primitives"
 import Keyword from "./schemas/Keyword"
 import {BaseUnit, unitSchema} from "./schemas/units";
 import CommandCard from "./schemas/CommandCard";
+import Quality from "./schemas/Quality";
 
 const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
 	"advantages": Advantage,
 	"command-cards": CommandCard,
 	"keywords": Keyword,
+	"qualities": Quality,
 	"spells": Spell,
 	"cryx": BaseUnit,
 	"cygnar": BaseUnit,

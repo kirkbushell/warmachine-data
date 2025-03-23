@@ -14,9 +14,8 @@ import {Dataset, Generic} from "./types"
 export const entry = async (keyword: string, dataset: string): Promise<Generic> => {
 	const data = await file(`${dataset}.json`)
 	
-	return data[keyword]
+	return {...data[keyword], dataset: dataset, id: keyword};
 }
-
 
 /**
  * Find an entry that exists in any of the files, by first looking at the index file, and then using the reference to
@@ -44,7 +43,7 @@ export const file = async (file: string): Promise<Dataset> => await import(`../d
 export const fullText = (content: string): Promise<string> => {
 	const expression = /\{([a-z]+)(-([a-z0-9]+))*}/ig
 	
-	// @ts-ignore: Ignoring as variadic arguments here is rather important for this logic to work...
+	// @ts-ignore: Ignoring TS warning, as variadic arguments being used in this case, is rather important for this logic to work...
 	const replacer = async (...args): string => {
 		// The even index matches aren't values we're interested in, so we grab only the odd index elements.
 		args = oddKeys(args)
