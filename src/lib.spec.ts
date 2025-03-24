@@ -46,3 +46,10 @@ test("fulltext can replace multiple keywords with their text", async () => {
 	expect(result).toContain('Blessed')
 	expect(result).toContain('Stealth')
 })
+
+test("fulltext leaves the param alone if it cannot find a replacement", async () => {
+	const content = "Let's handle {unknown}"
+	const result = await fullText(content)
+	
+	expect(result).toContain("{unknown}")
+})

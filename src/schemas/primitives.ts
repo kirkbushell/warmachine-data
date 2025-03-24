@@ -5,6 +5,10 @@ export const Dataset = z.record(z.string(), z.any())
 
 export const Abilities = z.array(z.union([z.string(), z.array(z.string())]))
 
+export const Army = z.enum([
+	"necrofactorium",
+])
+
 export const ModelAdvantage = z.enum([
 	"jackMarshal",
 	"advanceDeployment",
@@ -39,7 +43,7 @@ export const ModelAdvantage = z.enum([
 ])
 
 export const Faction = z.enum([
-	"necrofactorium",
+	"cryx",
 ])
 
 export const Feat = z.record(z.string(), z.object({

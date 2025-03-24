@@ -1,5 +1,9 @@
 import {Dataset, Generic} from "./types"
 
+export class DatasetError extends Error {
+
+}
+
 /**
  * @module warmachine-data/lib
  * @description This module provides a number of utility functions that can be used to work with the data in the warmachine data repository.
@@ -23,6 +27,10 @@ export const entry = async (keyword: string, dataset: string): Promise<Generic> 
  */
 export const find = async (keyword: string) => {
 	const dataset = (await index())[keyword]
+	
+	if (!dataset) {
+		throw new DatasetError(`No dataset found for ${keyword}`)
+	}
 	
 	return entry(keyword, dataset)
 }
@@ -49,7 +57,13 @@ export const fullText = (content: string): Promise<string> => {
 		args = oddKeys(args)
 		
 		// if args[3] is numeric, it's a static value, if it's a string, it's a reference to another ability or keyword.
-		args = await Promise.all(args.map(async (arg) => isNaN(arg) ? (await find(arg)).name : arg))
+		args = await Promise.all(args.map(async (arg) => {
+			try {
+				return isNaN(arg) ? (await find(arg)).name : arg
+			} catch (e) {
+				if (e instanceof DatasetError) return null
+			}
+		}))
 		
 		const name: string = args.shift()!
 		

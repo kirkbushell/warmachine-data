@@ -1,5 +1,15 @@
 import {z, ZodType} from "zod"
-import {Abilities, ModelAdvantage, Faction, Feat, Option, Points, Statistics, Weapons} from "./primitives"
+import {
+	Abilities,
+	Army,
+	ModelAdvantage,
+	Faction,
+	Feat,
+	Option,
+	Points,
+	Statistics,
+	Weapons,
+} from "./primitives"
 
 const Record = z.object({}).strict()
 
@@ -8,6 +18,7 @@ export const BaseUnit = Record.extend({
 	advantages: z.array(ModelAdvantage),
 	baseSize: z.number().positive(),
 	faction: Faction,
+	armies: z.array(Army),
 	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
 	keywords: z.array(z.string()),
 	name: z.string(),

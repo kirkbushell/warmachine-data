@@ -7,7 +7,6 @@ import Spell from "./schemas/Spell"
 import * as Units from "./schemas/units"
 import z from "zod"
 
-export type Abilities = z.infer<typeof Primitives.Abilities>
 export type Ability = z.infer<typeof Ability>
 export type Advantage = z.infer<typeof Advantage>
 export type Attachment = z.infer<typeof Units.Attachment>
@@ -29,5 +28,4 @@ export type Warcaster = z.infer<typeof Units.Warcaster>
 export type Warjack = z.infer<typeof Units.Warjack>
 export type Weapon = z.infer<typeof Primitives.Weapon>
 export type WeaponQuality = z.infer<typeof Primitives.WeaponQuality>
-export type Weapons = z.infer<typeof Primitives.Weapons>
 export type WeaponType = z.infer<typeof Primitives.WeaponType>
