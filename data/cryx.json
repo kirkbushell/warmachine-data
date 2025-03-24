@@ -447,12 +447,12 @@
 		],
 		"baseSize": 40,
 		"damageGrid": [
-			3,
-			3,
-			4,
-			4,
-			3,
-			3
+			"31CC",
+			"31CH",
+			"41CH",
+			"41MH",
+			"31MH",
+			"31MM"
 		],
 		"faction": "cryx",
 		"fieldAllowance": 6,
