@@ -1,7 +1,7 @@
 import Ability from "@/schemas/Ability.ts"
 import Advantage from "@/schemas/Advantage.ts"
 import CommandCard from "@/schemas/CommandCard.ts"
-import Keyword from "@/schemas/Keyword.ts"
+import Keyword from "@/schemas/Rule.ts"
 import * as Primitives from "@/schemas/primitives.ts"
 import Spell from "@/schemas/Spell.ts"
 import * as Units from "@/schemas/units.ts"
