@@ -1,10 +1,10 @@
-import Ability from "./schemas/Ability"
-import Advantage from "./schemas/Advantage"
-import CommandCard from "./schemas/CommandCard"
-import Keyword from "./schemas/Keyword"
-import * as Primitives from "./schemas/primitives"
-import Spell from "./schemas/Spell"
-import * as Units from "./schemas/units"
+import Ability from "@/schemas/Ability.ts"
+import Advantage from "@/schemas/Advantage.ts"
+import CommandCard from "@/schemas/CommandCard.ts"
+import Keyword from "@/schemas/Keyword.ts"
+import * as Primitives from "@/schemas/primitives.ts"
+import Spell from "@/schemas/Spell.ts"
+import * as Units from "@/schemas/units.ts"
 import z from "zod"
 
 export type Ability = z.infer<typeof Ability>

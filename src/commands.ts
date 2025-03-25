@@ -1,20 +1,25 @@
 import {SafeParseReturnType, ZodType} from "zod"
 import {Command} from "commander"
-import output from "./output"
+
+import output from "@/output.ts"
 import * as fs from "node:fs"
-import Ability from "./schemas/Ability"
-import Advantage from "./schemas/Advantage"
-import Spell from "./schemas/Spell"
-import {Dataset} from "./schemas/primitives"
-import Keyword from "./schemas/Keyword"
-import {BaseUnit, unitSchema} from "./schemas/units";
-import CommandCard from "./schemas/CommandCard";
-import Quality from "./schemas/Quality";
+import Ability from "@/schemas/Ability.ts"
+import Advantage from "@/schemas/Advantage.ts"
+import Spell from "@/schemas/Spell.ts"
+import {Dataset} from "@/schemas/primitives.ts"
+import Keyword from "@/schemas/Keyword.ts"
+import {BaseUnit, unitSchema} from "@/schemas/units.ts"
+import CommandCard from "@/schemas/CommandCard.ts"
+import Quality from "@/schemas/Quality.ts"
+import Army from "@/schemas/Army.ts"
+import Faction from "@/schemas/Faction.ts"
 
 const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
+	"armies": Army,
 	"advantages": Advantage,
 	"command-cards": CommandCard,
+	"factions": Faction,
 	"keywords": Keyword,
 	"qualities": Quality,
 	"spells": Spell,

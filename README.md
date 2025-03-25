@@ -151,9 +151,6 @@ However, should players wish to support Legacy, this could be managed through co
 updated to support the Legacy factions. If there is enough support, the project has been built in such a way to easily
 support that requirement, should it be needed.
 
-The various json files consists of all units within the game (Prime), as well as references to weapons.json, abilities.
-json and other files.
-
 ## Keywords
 
 Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These

@@ -9,7 +9,7 @@ import {
 	Points,
 	Statistics,
 	Weapons,
-} from "./primitives"
+} from "@/schemas/primitives.ts"
 
 const Record = z.object({}).strict()
 

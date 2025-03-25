@@ -1,6 +1,6 @@
 import {Command} from "commander"
-import {index, validate} from "./commands"
-import output from "./output"
+import {index, validate} from "@/commands.ts"
+import output from "@/output.ts"
 
 const program = new Command
 

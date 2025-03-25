@@ -1,4 +1,4 @@
-import {Dataset, Generic} from "./types"
+import {Dataset, Generic} from "@/types.ts"
 
 export class DatasetError extends Error {
 
@@ -9,6 +9,10 @@ export class DatasetError extends Error {
  * @description This module provides a number of utility functions that can be used to work with the data in the warmachine data repository.
  * @author Kirk Bushell
  */
+
+export const dataKeys = async (dataset: string) => {
+	return Object.keys(await import(`../data/${dataset}.json`))
+}
 
 /**
  * Retrieve a single entry from any of the required data files. The dataset argument should be a reference to a file
