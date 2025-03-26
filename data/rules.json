@@ -5,7 +5,7 @@
 	},
 	"aim": {
 		"name": "Aim",
-		"rules": "A model that uses its Normal Movement to aim receives a +2 bonus to every ranged attack roll it makes this activation. A model never gains this bonus while engaged."
+		"rules": "A model that uses its Normal Movement to aim receives a +2 bonus to every ranged attack roll it makes this activation. A model never gains this bonus while {rule:engaged}."
 	},
 	"battlegroup": {
 		"name": "battlegroup",
@@ -13,7 +13,7 @@
 	},
 	"blind": {
 		"name": "Blind",
-		"rules": "A model suffering Blind cannot make ranged or magic attacks, suffers -4 MAT and DEF, and cannot run, charge, or make slam or trample power attacks. It must forfeit either its Normal Movement or Combat Action during its next activation. Blind can be {shaken}."
+		"rules": "A model suffering Blind cannot make ranged or magic attacks, suffers -4 MAT and DEF, and cannot run, charge, or make slam or trample power attacks. It must forfeit either its Normal Movement or Combat Action during its next activation. Blind can be {rule:shaken}."
 	},
 	"boost": {
 		"name": "Boost",
@@ -25,15 +25,15 @@
 	},
 	"cloudEffect": {
 		"name": "Cloud Effect",
-		"rules": "A model inside a cloud effect gains {concealment}."
+		"rules": "A model inside a cloud effect gains {rule:concealment}."
 	},
 	"concealment": {
 		"name": "Concealment",
-		"rules": "A model with concealment in relation to its attacker gains +2 DEF against ranged and arcane attack rolls. Extra-large and huge-based models never gain the DEF bonus from concealment. Cover and concealment are not cumulative."
+		"rules": "A model with concealment in relation to its attacker gains +2 DEF against ranged and arcane attack rolls. Extra-large and huge-based models never gain the DEF bonus from concealment. {rule:cover} and concealment are not cumulative."
 	},
 	"cover": {
 		"name": "Cover",
-		"rules": "A model with cover in relation to its attackers gains +4 DEF against ranged and arcane attacks. Extra-large and huge-based models never gain the DEF bonus from cover. Cover and concealment are not cumulative."
+		"rules": "A model with cover in relation to its attackers gains +4 DEF against ranged and arcane attacks. Extra-large and huge-based models never gain the DEF bonus from cover. Cover and {rule:concealment} are not cumulative."
 	},
 	"criticalHit": {
 		"name": "Critical Hit",
@@ -43,9 +43,17 @@
 		"name": "Elevation Bonus",
 		"rules": "A large or smaller-based elevated model gains +2 DEF against ranged and arcane attack rolls made by models on lower elevations. Extra-large and huge-based models never gain the DEF bonus from elevation."
 	},
+	"engaged": {
+		"name": "Engaged",
+		"rules": "When a model is within an enemy model's melee range and in that model's line of sight, it is engaged."
+	},
+	"engaging": {
+		"name": "Engaging",
+		"rules": "When a model has an enemy model in its melee range and line of sight, it is engaging that model."
+	},
 	"engagedAttacker": {
 		"name": "Engaged Attacker",
-		"rules": "A model engaged by one or more enemy models can only make ranged attacks targeting enemy models engaging it. Additionally, while engaged, a model cannot gain the bonus for aiming."
+		"rules": "A model {rule:engaged} by one or more enemy models can only make ranged attacks targeting enemy models {rule:engaging} it. Additionally, while {rule:engaged}, a model cannot gain the bonus for {rule:aim}ing."
 	},
 	"knockedDownTarget": {
 		"name": "Knocked Down Target",
@@ -53,11 +61,11 @@
 	},
 	"shadowBind": {
 		"name": "Shadow Bind",
-		"rules": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be {shaken}."
+		"rules": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be {rule:shaken}."
 	},
 	"shaken": {
 		"name": "Shaken",
-		"rules": "An effect that is shakeable can be shaken by spending 1 focus or fury point. If the model is knocked down, stationary, or is suffering an effect like {blind} or {shadowBind}, that effect expires. Note that only one of these shakeable effects can be expired per focus/fury point."
+		"rules": "An effect that is shakeable can be shaken by spending 1 focus or fury point. If the model is knocked down, stationary, or is suffering an effect like {rule:blind} or {rule:shadowBind}, that effect expires. Note that only one of these shakeable effects can be expired per focus/fury point."
 	},
 	"stationaryTarget": {
 		"name": "Stationary Target",

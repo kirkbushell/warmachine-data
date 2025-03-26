@@ -19,7 +19,7 @@ const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
 	"armies": Army,
 	"advantages": Advantage,
-	"command-cards": CommandCard,
+	"commands": CommandCard,
 	"factions": Faction,
 	"rules": Rule,
 	"qualities": Quality,
@@ -78,7 +78,10 @@ const buildIndex = async (program: Command) => {
 	for (const schema of Object.keys(schemas)) {
 		const module = await import(`../data/${schema}.json`)
 		
-		for (const key of Object.keys(module.default)) {
+		for (const entry of Object.keys(module.default)) {
+			const prefix = singular(schema).split('/').pop()
+			const key = prefix + ':' + entry
+			
 			if (map[key]) {
 				program.error(`Duplicate discovered for key ${key} in schema data/${schema}.json. Original key found in data/${map[key]}.json`)
 			}
@@ -153,4 +156,24 @@ const parse = (schema: string, record: any): SafeParseReturnType<any, any> => {
 	const parser = schemas[schema] === BaseUnit ? unitSchema(record as { type: string }) : schemas[schema]
 	
 	return parser.safeParse(record)
+}
+
+const singular = (word: string) => {
+	const endings: Record<string, string> = {
+		ves: 'fe',
+		ies: 'y',
+		i: 'us',
+		zes: 'ze',
+		ses: 's',
+		es: 'e',
+		s: ''
+	};
+	return word.replace(
+		new RegExp(`(${Object.keys(endings).join('|')})$`),
+		r => endings[r]
+	);
+}
+
+const ucfirst = (text: string): string => {
+	return text.charAt(0).toUpperCase() + text.slice(1);
 }

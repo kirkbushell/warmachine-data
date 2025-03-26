@@ -66,7 +66,7 @@
 	},
 	"digIn": {
 		"name": "Dig In",
-		"rules": "A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.",
+		"rules": "A model with Dig In gains {rule:cover}, gains {advantage:resistanceBlast}, and does not block LOS. The model remains dug in until it moves, is placed, or is {rule:engaged}.",
 		"type": "passive"
 	},
 	"dodge": {

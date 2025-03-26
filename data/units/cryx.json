@@ -17,9 +17,9 @@
 		"baseSize": 40,
 		"faction": "cryx",
 		"feat": {
-			"boneyard": {
-				"name": "Boneyard",
-				"rules": "Large and smaller-based models in Eviscerus' battlegroup currently in his control range gain {Dig In}. An affected model that begins its activation dug in as a result of Boneyard gains +2 SPD and a focus point that activation. (A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.)"
+			"doomsDay": {
+				"name": "Doom's Day",
+				"rules": "Dekathus immediately gains five soul tokens. When a model in Dekathus' control range makes an attack or damage roll, Dekathus can spend a soul token to cause that model to re-roll that roll. Each roll can be re-rolled only once due to Doom's day. Doom's day lasts for one round."
 			}
 		},
 		"fieldAllowance": "c",
@@ -83,9 +83,9 @@
 		"baseSize": 40,
 		"faction": "cryx",
 		"feat": {
-			"doomsDay": {
-				"name": "Doom's Day",
-				"rules": "Dekathus immediately gains five soul tokens. When a model in Dekathus' control range makes an attack or damage roll, Dekathus can spend a soul token to cause that model to re-roll that roll. Each roll can be re-rolled only once due to Doom's day. Doom's day lasts for one round."
+			"boneyard": {
+				"name": "Boneyard",
+				"rules": "Large and smaller-based models in Eviscerus' battlegroup currently in his control range gain {ability:digIn}. An affected model that begins its activation dug in as a result of Boneyard gains +2 SPD and a focus point that activation."
 			}
 		},
 		"fieldAllowance": "c",
