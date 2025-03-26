@@ -14,6 +14,7 @@ import CommandCard from "@/schemas/CommandCard.ts"
 import Quality from "@/schemas/Quality.ts"
 import Army from "@/schemas/Army.ts"
 import Faction from "@/schemas/Faction.ts"
+import {pathToFileURL} from "node:url"
 
 const schemas: { [key: string]: ZodType } = {
 	"abilities": Ability,
@@ -98,7 +99,7 @@ const buildIndex = async (program: Command) => {
 }
 
 const buildKeywords = async (program: Command) => {
-	const dirname = `${import.meta.dirname}/../data/units`
+	const dirname = pathToFileURL(`${import.meta.dirname}/../data/units`)
 	let keywords: string[] = []
 	
 	const modules = await fsPromises.readdir(dirname).then((files) => Promise.all(files.map(file => import(`${dirname}/${file}`))))
