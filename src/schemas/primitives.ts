@@ -32,7 +32,7 @@ export const Weapon = z.object({
 	qualities: z.array(WeaponQuality).optional(),
 	quantity: z.number().positive(),
 	statistics: z.object({
-		range: z.union([z.number(), z.string().regex(new RegExp("^Spray [0-9]+$"))]),
+		range: z.union([z.number(), z.string().regex(new RegExp("^Spray [0-9]+$")), z.literal("controlRange")]),
 		rateOfFire: z.union([z.number(), z.string().optional()]),
 		power: z.number(),
 	}),

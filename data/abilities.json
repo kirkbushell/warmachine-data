@@ -19,6 +19,31 @@
 		"rules": "During your Control Phase, place this model anywhere completely within 2\" of its current location.",
 		"type": "passive"
 	},
+	"arcaneCalibration": {
+		"name": "Arcane Calibration",
+		"rules": "Reduce the COST of each spell this model casts this activation by 1 to a minimum of 1.",
+		"type": "passive"
+	},
+	"arcaneInterference": {
+		"name": "Arcane Interference",
+		"rules": "Upkeep spells and animi on a model directly hit with this weapon expire. A warjack directly hit with this weapon suffers {disruption}.",
+		"type": "passive"
+	},
+	"arcaneMachinery": {
+		"name": "Arcane Machinery",
+		"rules": "Once per turn at any time during its activation, this model can use one of the following effects. Arcane Machinery effects last for one round.",
+		"type": "passive"
+	},
+	"arcanePrecision": {
+		"name": "Arcane Precision",
+		"rules": "If this model uses its Normal Movement to aim, it ignores {cloudEffect} when determining LOS and ignores {stealth} that activation.",
+		"type": "passive"
+	},
+	"attackType": {
+		"name": "Attack Type",
+		"rules": "Each time this weapon is used to make an attack, choose one of the following special rules:",
+		"type": "weapon"
+	},
 	"banish": {
 		"name": "Banish",
 		"rules": "When this weapon boxes an enemy non-Leader model, immediately after the attack is resolved you can place the enemy model anywhere completely within 1\" of its current location.",
@@ -27,6 +52,16 @@
 	"battlePlan": {
 		"name": "Battle Plan",
 		"rules": "This model can use one of the following plans at any time during its activation:",
+		"type": "passive"
+	},
+	"beatBack": {
+		"name": "Beat Back",
+		"rules": "Immediatly after a basic attack with this weapon is resolved during this model's Combat Action, the enemy model hit can be pushed 1\" directly away from the attacking model. After the enemy model is pushed, the attacking model can advance up to 1\" directly toward it.",
+		"type": "weapon"
+	},
+	"birdsEye": {
+		"name": "Birds Eye",
+		"rules": "While in this model's control range, models in its battlegroup can ignore {cloudEffect}, forest terrain and intervening models when determining LOS.",
 		"type": "passive"
 	},
 	"blackMantle": {
@@ -39,6 +74,11 @@
 		"rules": "Once per activation, immediately after resolving an attack in which it destroyed an enemy model with this weapon, this model can cast a spell without spending focus or fury points.",
 		"type": "weapon"
 	},
+	"bloodQuenched": {
+		"name": "Blood-Quenched",
+		"rules": "This model gains a cumulative +1 ARM and +1 to its melle damage rolls for each enemy model it destroys with a melee attack during its activation. This bonus lasts for one round.",
+		"type": "passive"
+	},
 	"bloodShadow": {
 		"name": "Blood Shadow",
 		"rules": "If this attack boxes a living or undead model, this model can gain Incorporeal for one round.",
@@ -49,14 +89,34 @@
 		"rules": "This model gains +2 to charge attack damage rolls with this weapon.",
 		"type": "weapon"
 	},
+	"brutalDamage": {
+		"name": "Brutal Damage",
+		"rules": "On a direct hit, gain an additional die on this weapon's damage rolls against the target directly hit.",
+		"type": "weapon"
+	},
 	"chopShop": {
 		"name": "Chop Shop",
 		"rules": "When a model in this model's battlegroup destroyed an enemy construct model with a melee attack, remove d3 + 1 damage points from model in this model's battlegroup currently in its control range and remove the destroyed model from play.",
 		"type": "passive"
 	},
+	"crater": {
+		"name": "Crater",
+		"rules": "On a direct hit, models hit suffer -2 SPD for one round",
+		"type": "weapon"
+	},
 	"criticalCortexDamage": {
 		"name": "Critical Cortex Damage",
 		"rules": "On a critical hit on a warjack, the warjack suffers 1 damage to its first available Cortex system box.",
+		"type": "weapon"
+	},
+	"criticalKnockdown": {
+		"name": "Critical Knockdown",
+		"rules": "On a critical hit, models hit become knocked down.",
+		"type": "weapon"
+	},
+	"criticalThunderclap": {
+		"name": "Critical Thunderclap",
+		"rules": "On a critical hit, models hit without {advantage:resistanceElectricity} become knocked down.",
 		"type": "weapon"
 	},
 	"darkDomination": {
@@ -74,7 +134,7 @@
 		"rules": "When this weapon boxes a living enemy warrior model, remove that model from play and return one Grunt to a small-based Mechanithrall unit within 8\" of this model. Place the Grunt with 2\" of another model in that unit. The Grunt must forfeit its Normal Movement and Combat Action the turn it is put into play.",
 		"type": "weapon"
 	},
-	"defenceFormation": {
+	"defenseFormation": {
 		"name": "Defense Formation",
 		"rules": "While in this model's control range and B2B with one or more models in its battlegroup, model's battlegroup with an extra-large base or smaller gain +2 ARM and cannot become knocked down.",
 		"type": "passive"
@@ -89,6 +149,16 @@
 		"rules": "This model can advance up to 2\" immediately after an enemy attack that missed it is resolved.",
 		"type": "passive"
 	},
+	"electroLeap": {
+		"name": "Electro Leap",
+		"rules": "When a model is directly hit with a basic attack made with this weapon, you can have lightning arc to the nearest model within 3\" of the model hit, ignoring the attacking model. The model the lightning arcs to suffers an unboostable POW 10 electrical damage roll. Lightning arc damage rolls are not considered to have been caused by an attack. Resolve lightning arc damage rolls simultaneously with the damage resulting from the attack that caused the leap.",
+		"type": "weapon"
+	},
+	"empoweredAttack": {
+		"name": "Empowered Attack",
+		"rules": "This weapon gains +2 on its damage rolls.",
+		"type": "passive"
+	},
 	"entropicForce": {
 		"name": "Entropic Force",
 		"rules": "While within 5\" of this model, enemy models lose Tough and cannot have damage removed from them.",
@@ -98,6 +168,11 @@
 		"name": "Erosion",
 		"rules": "This model gains an additional die on this weapon's damage rolls against construct models.",
 		"type": "weapon"
+	},
+	"evasive": {
+		"name": "Evasive",
+		"rules": "When this model is hit by an enemy ranged attack, immediately after the attack is resolved this model can advance up to 2\".",
+		"type": "passive"
 	},
 	"feignDeath": {
 		"name": "Feign Death",
@@ -129,6 +204,21 @@
 		"rules": "At the end of this models activation, this model can spend 1 focus point to be placed completely within 5\" of its current location.",
 		"type": "passive"
 	},
+	"grievousWounds": {
+		"name": "Grievous Wounds",
+		"rules": "A model hit by this weapon loses {tough} and cannot have damage removed from it for one round.",
+		"type": "weapon"
+	},
+	"headShot": {
+		"name": "Head Shot",
+		"rules": "Models disabled by a ranged attack made by this model cannot make a Tough roll. Models destroyed by a ranged attack made by this model are removed from play.",
+		"type": "passive"
+	},
+	"heartSeeker": {
+		"name": "Heart Seeker",
+		"rules": "Gain an additional die on damage rolls resulting from this atack. Discard the lowest die in each roll.",
+		"type": "passive"
+	},
 	"hexBlast": {
 		"name": "Hex Blast",
 		"rules": "Hex Blast is a RNG 10, AOE2, POW 13/8 arcane attack. Enemy upkeep spells and animi on the model/unit directly hit by Hex Blast immediately expire.",
@@ -136,17 +226,52 @@
 	},
 	"invocationOfBitterestNight": {
 		"name": "Invocation of Bitterest Night",
-		"rules": "This model gains {stealth} and {blackMantle} for one round.",
+		"rules": "This model gains {stealth} and {ability:blackMantle} for one round.",
 		"type": "action"
+	},
+	"ionizationCtrl": {
+		"name": "Ionization [CTRL]",
+		"rules": "When a model without {resistanceElectricity} suffers an electrical damage roll while within this model's control range of this model, add +2 to the roll.",
+		"type": "passive"
+	},
+	"ionizationRng": {
+		"name": "Ionization [$1]",
+		"rules": "When a model without {resistanceElectricity} suffers an electrical damage roll while within [$1]\" of this model, add +2 to the roll.",
+		"type": "passive"
+	},
+	"ironHorse": {
+		"name": "Iron Horse",
+		"rules": "Light and heavy warjacks in this model'S battlegroup gain {pathfinder} and {ability:reposition-5}. Additionally, light and heavy warjack in this model's battlegroup gain +2 SPD when resolving charges.",
+		"type": "passive"
+	},
+	"killingSpree": {
+		"name": "Killing Spree",
+		"rules": "When this model destroys one or more enemy models with a melee attack during its Combat Action, after that attack is resolved this model can advance up to 1\" and make one additional melee attack.",
+		"type": "passive"
+	},
+	"kineticGrip": {
+		"name": "Kinetic Grip",
+		"rules": "When a model is directly hit by this attack, it suffers -2 SPD for one round.",
+		"type": "passive"
 	},
 	"knowledgeOfTheDamned": {
 		"name": "Knowledge of the Damned",
 		"rules": "When a model in this model's control range makes an attack or damage roll, this model can spend a soul token to cause that model to re-roll the roll. Each roll can be re-rolled only once due to Knowledge of the Damned.",
 		"type": "passive"
 	},
+	"leadership": {
+		"name": "Leadership-[$1]",
+		"rules": "While within 10\" of this model, friendly [$1] models gain {ability:headShot}.",
+		"type": "weapon"
+	},
 	"lifeDrinker": {
 		"name": "Life Drinker",
 		"rules": "When this model boxes a living enemy model with this weapon, this model can remove d3 damage points.",
+		"type": "weapon"
+	},
+	"lightningGenerator": {
+		"name": "Lightning Generator",
+		"rules": "When a model is directly hit with a basic attack made with this weapon, lightning arcs from the model hit to d3 consecutive additional models. The lightning arcs to the nearest model it has not already arced to within 3\" of the last model it arced to, ignoring this model. Each model the lightning arcs to suffers a POW 10 electrical damage roll. Lightning arc damage rolls are not considered to have been caused by an attack. Resolve lightning arc damage rolls simultaneously with the damage from the attack that caused the leap.",
 		"type": "weapon"
 	},
 	"magicAbility": {
@@ -158,6 +283,11 @@
 		"name": "Necrosurgery [d3+1]",
 		"rules": "RNG 1. Target friendly undead Faction model. If the model is in range, remove d3+1 damage points from it.",
 		"type": "action"
+	},
+	"oathOfVengeance": {
+		"name": "Oath of Vengeance [$1]",
+		"rules": "This model gains +2 to its attack and damage rolls against [$1] models.",
+		"type": "passive"
 	},
 	"polarityField": {
 		"name": "Polarity Field",
@@ -174,10 +304,20 @@
 		"rules": "While within 10\" of this model, friendly models ignore other friendly models when determining LOS. Friendly models can advance through other friendly models within 10\" of this model if they have enough movement to move completely past them. Precision Strike lasts for one turn.",
 		"type": "passive"
 	},
+	"prowl": {
+		"name": "Prowl",
+		"rules": "While this model has {concealment}, it gains {stealth}.",
+		"type": "passive"
+	},
 	"relentlessCharge": {
 		"name": "Relentless Charge",
 		"rules": "While advancing as part of a charge, a model with Relentless Charge gains {pathfinder}.",
 		"type": "passive"
+	},
+	"reload": {
+		"name": "Reload [$1\"]",
+		"rules": "This model can spend [$1] focus or fury point to make one additional ranged attack with this weapon during its Combat Action",
+		"type": "weapon"
 	},
 	"repair": {
 		"name": "Repair",
@@ -187,7 +327,7 @@
 	},
 	"repairable": {
 		"name": "Repairable",
-		"rules": "This model can be targeted with {repair} special actions as if it were a construct model.",
+		"rules": "This model can be targeted with {ability:repair} special actions as if it were a construct model.",
 		"type": "passive"
 	},
 	"reposition": {
@@ -205,6 +345,21 @@
 		"rules": "When a model with Riposte is missed by an enemy melee attack, immediately after the attack is resolved the model with Riposte can make one basic melee attack against the attacking model.",
 		"type": "passive"
 	},
+	"runAndGun": {
+		"name": "Run & Gun",
+		"rules": "At the end of its activation, if this model destroyed one or more enemy models with ranged attacks that activation, it can make a full advance.",
+		"type": "passive"
+	},
+	"shadowBind": {
+		"name": "Shadow Bind",
+		"rules": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be shaken.",
+		"type": "passive"
+	},
+	"sideStep": {
+		"name": "Side Step",
+		"rules": "When this model hits an enemy model with an initial melee attack or a melee special attack, it can advance up to 2\" after the attack is resolved",
+		"type": "passive"
+	},
 	"soulTakerCullSoul": {
 		"name": "Soul Taker: Cull Soul",
 		"rules": "This model can gain soul tokens. When a living enemy model is destroyed within 2\" of this model, this m odel gains the destroyed model's soul token. After this model replenishes its focus during your next Control Phase, replace each soul token with 1 focus point.",
@@ -217,13 +372,18 @@
 	},
 	"specialOrders": {
 		"name": "Special Orders",
-		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {reposition-3} for one turn.",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {ability:reposition-3} for one turn.",
 		"type": "passive"
 	},
 	"steady": {
 		"name": "Steady",
 		"rules": "This model cannot become knocked down.",
 		"type": "passive"
+	},
+	"stormcall": {
+		"name": "Stormcall",
+		"rules": "Attacks made with this weapon ignore {concealement}, {cover}, {elevationBonus} and {stealth}",
+		"type": "weapon"
 	},
 	"strengthOfDeath": {
 		"name": "Strength of Death",
@@ -235,15 +395,30 @@
 		"rules": "During this model's activation, when it makes an attack with this weapon against the last model hit by the weapon this activation, the attack automatically hits.",
 		"type": "weapon"
 	},
+	"swiftHunter": {
+		"name": "Swift Hunter",
+		"rules": "When a model with Swift Hunter destroys one or more enemy models with a basic ranged attack, immediately after the attack is resolved it can advance up to 2\".",
+		"type": "passive"
+	},
 	"tenacity": {
 		"name": "Tenacity",
-		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {feignDeath} for one round.",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {ability:feignDeath} for one round.",
+		"type": "passive"
+	},
+	"thunderbolt": {
+		"name": "Thunderbolt",
+		"rules": "Enemy models hit are pushed d3\" directly away from the attacking model. On a critical hit, the enemy model becomes knocked down after being pushed.",
 		"type": "passive"
 	},
 	"vengeance": {
 		"name": "Vengeance",
 		"rules": "During your Maintenance Phase, if one or more models in this unit were damaged by enemy attacks during the last round, each model in the unit can advance 3\" and make one basic melee attack.",
 		"type": "weapon"
+	},
+	"vexingAlignement": {
+		"name": "Vexing Alignement",
+		"rules": "Increase this model's control range by 4\".",
+		"type": "passive"
 	},
 	"vitalMagic": {
 		"name": "Vital Magic",
@@ -254,6 +429,11 @@
 		"name": "Volume Fire",
 		"rules": "Gain +1 to attack and damage rolls with this weapon against medium-based models and +2 to attack and damage rolls against larger-based models.",
 		"type": "weapon"
+	},
+	"witchMark": {
+		"name": "Witch Mark",
+		"rules": "If this atack hits an enemy model during this model's activation, until the end of that activation this model can target and automatically hit that enemy model with spells, ignoring RNG and LOS.",
+		"type": "passive"
 	},
 	"wraithbinder": {
 		"name": "Wraithbinder",

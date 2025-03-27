@@ -9,6 +9,16 @@
 		},
 		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
 	},
+	"admonition": {
+		"name": "Admonition",
+		"statistics": {
+			"cost": 2,
+			"duration":"upkeep",
+			"offensive": false,
+			"range": 6
+		},
+		"rules": "When an enemy model advances and ends its movement or is placed within 6\" of target model in the spellcaster's battlegroup, the affected model can immediately advance up to 3\", then Admonition expires."
+	},
 	"avengingForce": {
 		"name": "Avenging Force",
 		"statistics": {
@@ -28,6 +38,16 @@
 			"range": 10
 		},
 		"rules": "Target model/unit suffers -2 SPD and DEF for one round."
+	},
+	"calamity": {
+		"name": "Calamity",
+		"statistics": {
+			"cost": 3,
+			"duration": "upkeep",
+			"offensive": true,
+			"range": 10
+		},
+		"rules": "Target enemy models/units suffers -2 DEF and ARM."
 	},
 	"carrionFeast": {
 		"name": "Carrion Feast",
@@ -51,6 +71,26 @@
 		},
 		"rules": "Friendly Faction models beginning a charge in the spellcaster's control range gain +2 SPD. Crusader's Call lasts for one turn."
 	},
+	"cursedFate": {
+		"name": "Cursed Fate",
+		"statistics": {
+			"cost": 2,
+			"duration": "turn",
+			"offensive": true,
+			"range": 10
+		},
+		"rules": "Target model/unit suffers -2 DEF. When a damage roll resulting from a direct hit fails to exceed the ARM of an affected model, the model suffers 1 damage point. Cursed Fate lasts for one turn."
+	},
+	"curseOfShadows": {
+		"name": "Curse of Shadows",
+		"statistics": {
+			"cost": 3,
+			"duration": "upkeep",
+			"offensive": true,
+			"range": 8
+		},
+		"rules": "Target model/unit suffers -2 ARM. A model can advance through an affected model if it has enough movement to move completely past its base."
+	},
 	"deceleration": {
 		"name": "Deceleration",
 		"statistics": {
@@ -62,6 +102,36 @@
 		},
 		"rules": "While in the spellcaster's control range, friendly Faction models gain +2 ARM against ranged and arcane attack damage rolls. Deceleration lasts for one round."
 	},
+	"energizer": {
+		"name": "Energizer",
+		"statistics": {
+			"cost": 2,
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Each model in the spellcaster's battlegroup that is currently in its control range can immediatly advance up to 2\". Energizer can be cast only once per activation."
+	},
+	"escort": {
+		"name": "Escort",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 3,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Cohort models in the spellcaster's battlegroup beginning their activations in the spellcaster's control range gain +2 SPD when advancing as part of their Normal Movement. The spellcaster gains +2 ARM while one or more cohort models in its battlegroup are within 3\" of it."
+	},
+	"heightenedReflexes": {
+		"name": "Heightened Reflexes",
+		"statistics": {
+			"cost": 1,
+			"duration": "round",
+			"offensive": false,
+			"range": 8
+		},
+		"rules": "Target friendly model can not be knocked down or made stationary for one round."
+	},
 	"impendingDoom": {
 		"name": "Impending Doom",
 		"statistics": {
@@ -70,6 +140,37 @@
 			"range": "self"
 		},
 		"rules": "Enemy models within 5\" of the spellcaster are pushed 5\" directly toward it in the order you choose."
+	},
+	"inhospitableGround": {
+		"name": "Inhospitable Ground",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 2,
+			"duration": "round",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "While in the spellcaster's control range, enemy models treat open terrain as rough terrain. Inhospitable Ground lasts for one round."
+	},
+	"jackhammer": {
+		"name": "Jackhammer",
+		"statistics": {
+			"cost": 2,
+			"offensive": false,
+			"range": "controlRange"
+		},
+		"rules": "Target model in the spellcaster's battlegroup currently in its control range immediately makes one basic melee attack."
+	},
+	"mobility": {
+		"name": "Mobility",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 3,
+			"duration": "turn",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Models in the spellcaster's battlegroup currently in its control range gain +2 SPD and {pathfinder} for one turn."
 	},
 	"onslaught": {
 		"name": "Onslaught",
@@ -88,7 +189,17 @@
 			"offensive": false,
 			"range": "controlRange"
 		},
-		"rules": "Target cohort model in this model's battlegroup that is in its control range can immediately make one basic range attack. A model can be targeted by Open Fire only once per turn."
+		"rules": "Target {cohort} model in this model's battlegroup that is in its control range can immediately make one basic range attack. A model can be targeted by Open Fire only once per turn."
+	},
+	"positiveCharge": {
+		"name": "Positive Charge",
+		"statistics": {
+			"cost": 2,
+			"duration": "turn",
+			"offensive": false,
+			"range": 6
+		},
+		"rules": "Target friendly Faction {cohort} model gains +2 to melee attack and melee damage rolls. While within 3\" of the affected {cohort} model, other friendly Faction models gain +2 on melee attack and melee damage rolls. Positive Charge lasts for one turn."
 	},
 	"redline": {
 		"name": "Redline",
@@ -121,5 +232,45 @@
 			"range": "self"
 		},
 		"rules": "While in the spellcaster's control range, models in its battlegroup gain Stealth and Dark Shroud. Shadowmancer lasts for one round."
+	},
+	"shadowStep": {
+		"name": "Shadow Step",
+		"statistics": {
+			"cost": 2,
+			"duration": "round",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Enemy models currently within 2\" of the spellcaster suffer {ability:shadowBind} for one round. Additionally, you can place the spellcaster anywhere completely within 3\" of its current location. Shadow Step can be cast only once per activation."
+	},
+	"Sunhammer": {
+		"name": "Sunhammer",
+		"statistics": {
+			"areaOfEffect": "controlRange",
+			"cost": 2,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Enemy warbeasts and warjacks that advance more than 1\" and end their Normal Movement in the spellcaster's control range suffer d3 damage points."
+	},
+	"teleport": {
+		"name": "Teleport",
+		"statistics": {
+			"cost": 2,
+			"offensive": false,
+			"range": "self"
+		},
+		"rules": "Place the spellcaster anywhere completely within 6\" of its current location, then its activation ends."
+	},
+	"veilOfMists": {
+		"name": "Veil of Mists",
+		"statistics": {
+			"cost": 2,
+			"duration": "upkeep",
+			"offensive": false,
+			"range": "controlRange"
+		},
+		"rules": "Place a {cloudEffect} template anywhere completely within the spellcaster's control range. The template does not block friendly Faction models's LOS. While in the template, friendly Faction models gain {pathfinder} and can move through obstructions and other models if they have enough movement to move completely past them."
 	}
 }
