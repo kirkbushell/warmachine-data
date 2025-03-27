@@ -1,67 +1,4 @@
 {
-	"eviscerus1": {
-		"abilities": [
-			"fieldMarshal-retaliatoryStrike",
-			"chopShop",
-			"repairable",
-			"repair",
-			"steady"
-		],
-		"advantages": [
-			"pathfinder",
-			"undead"
-		],
-		"baseSize": 40,
-		"faction": "necrofactorium",
-		"feat": {
-			"doomsDay": {
-				"name": "Doom's Day",
-				"rules": "Dekathus immediately gains five soul tokens. When a model in Dekathus' control range makes an attack or damage roll, Dekathus can spend a soul token to cause that model to re-roll that roll. Each roll can be re-rolled only once due to Doom's day. Doom's day lasts for one round."
-			}
-		},
-		"fieldAllowance": "c",
-		"keywords": [
-			"cryx",
-			"necrofactorium",
-			"scout",
-			"warcaster"
-		],
-		"name": "Discerptor Eviscerus",
-		"rackSlots": 2,
-		"spells": [
-			"annihilation",
-			"impendingDoom",
-			"shadowmancer"
-		],
-		"statistics": {
-			"arcana": 7,
-			"arcaneAttack": 7,
-			"armour": 16,
-			"controlRange": 14,
-			"defense": 14,
-			"health": 17,
-			"meleeAttack": 6,
-			"speed": 6
-		},
-		"type": "warcaster",
-		"weapons": {
-			"bonePicker": {
-				"abilities": [
-					"erosion"
-				],
-				"name": "Bone Picker",
-				"qualities": [
-					"damageTypeMagical"
-				],
-				"quantity": 2,
-				"statistics": {
-					"power": 15,
-					"range": 1
-				},
-				"type": "melee"
-			}
-		}
-	},
 	"dekathus1": {
 		"abilities": [
 			"entropicForce",
@@ -74,12 +11,15 @@
 			"undead",
 			"unstoppable"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 40,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"feat": {
-			"boneyard": {
-				"name": "Boneyard",
-				"rules": "Large and smaller-based models in Eviscerus' battlegroup currently in his control range gain {Dig In}. An affected model that begins its activation dug in as a result of Boneyard gains +2 SPD and a focus point that activation. (A model with Dig In gains cover, gains Resistance: Blast, and does not block LOS. The model remains dug in until it moves, is placed, or is engaged.)"
+			"doomsDay": {
+				"name": "Doom's Day",
+				"rules": "Dekathus immediately gains five soul tokens. When a model in Dekathus' control range makes an attack or damage roll, Dekathus can spend a soul token to cause that model to re-roll that roll. Each roll can be re-rolled only once due to Doom's day. Doom's day lasts for one round."
 			}
 		},
 		"fieldAllowance": "c",
@@ -125,6 +65,72 @@
 			}
 		}
 	},
+	"eviscerus1": {
+		"abilities": [
+			"fieldMarshal-retaliatoryStrike",
+			"chopShop",
+			"repairable",
+			"repair",
+			"steady"
+		],
+		"advantages": [
+			"pathfinder",
+			"undead"
+		],
+		"armies": [
+			"necrofactorium"
+		],
+		"baseSize": 40,
+		"faction": "cryx",
+		"feat": {
+			"boneyard": {
+				"name": "Boneyard",
+				"rules": "Large and smaller-based models in Eviscerus' battlegroup currently in his control range gain {ability:digIn}. An affected model that begins its activation dug in as a result of Boneyard gains +2 SPD and a focus point that activation."
+			}
+		},
+		"fieldAllowance": "c",
+		"keywords": [
+			"cryx",
+			"necrofactorium",
+			"scout",
+			"warcaster"
+		],
+		"name": "Discerptor Eviscerus",
+		"rackSlots": 2,
+		"spells": [
+			"annihilation",
+			"impendingDoom",
+			"shadowmancer"
+		],
+		"statistics": {
+			"arcana": 7,
+			"arcaneAttack": 7,
+			"armour": 16,
+			"controlRange": 14,
+			"defense": 14,
+			"health": 17,
+			"meleeAttack": 6,
+			"speed": 6
+		},
+		"type": "warcaster",
+		"weapons": {
+			"bonePicker": {
+				"abilities": [
+					"erosion"
+				],
+				"name": "Bone Picker",
+				"qualities": [
+					"damageTypeMagical"
+				],
+				"quantity": 2,
+				"statistics": {
+					"power": 15,
+					"range": 1
+				},
+				"type": "melee"
+			}
+		}
+	},
 	"sepsira1": {
 		"abilities": [
 			"anatomicalPrecision",
@@ -140,8 +146,11 @@
 		"advantages": [
 			"undead"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 30,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"feat": {
 			"graveyardShift": {
 				"name": "Graveyard Shift",
@@ -200,8 +209,11 @@
 			"dualAttack",
 			"pathfinder"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 30,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"feat": {
 			"wrathOfLyliss": {
 				"name": "Wrath of Lyliss",
@@ -287,8 +299,11 @@
 			"pathfinder",
 			"undead"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 40,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"fieldAllowance": 2,
 		"keywords": [
 			"cryx",
@@ -334,8 +349,11 @@
 			"pathfinder",
 			"undead"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 40,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"fieldAllowance": 4,
 		"keywords": [
 			"cryx",
@@ -379,8 +397,11 @@
 			"tough",
 			"undead"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 30,
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"fieldAllowance": 6,
 		"grunts": 5,
 		"keywords": [
@@ -421,16 +442,19 @@
 			"pathfinder",
 			"slamPowerAttack"
 		],
+		"armies": [
+			"necrofactorium"
+		],
 		"baseSize": 40,
 		"damageGrid": [
-			3,
-			3,
-			4,
-			4,
-			3,
-			3
+			"31CC",
+			"31CH",
+			"41CH",
+			"41MH",
+			"31MH",
+			"31MM"
 		],
-		"faction": "necrofactorium",
+		"faction": "cryx",
 		"fieldAllowance": 6,
 		"keywords": [
 			"cryx",

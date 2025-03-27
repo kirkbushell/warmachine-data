@@ -1,7 +1,8 @@
 {
 	"compilerOptions": {
+		"allowImportingTsExtensions": true,
 		"target": "es2022",
-		"module": "commonjs",
+		"module": "node16",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
@@ -10,7 +11,12 @@
 		"outDir": "dist",
 		"resolveJsonModule": true,
 		"strict": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		}
 	},
 	"include": [
 		"src/**/*"

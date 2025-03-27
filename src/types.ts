@@ -1,13 +1,12 @@
-import Ability from "./schemas/Ability"
-import Advantage from "./schemas/Advantage"
-import CommandCard from "./schemas/CommandCard"
-import Keyword from "./schemas/Keyword"
-import * as Primitives from "./schemas/primitives"
-import Spell from "./schemas/Spell"
-import * as Units from "./schemas/units"
+import Ability from "@/schemas/Ability.ts"
+import Advantage from "@/schemas/Advantage.ts"
+import CommandCard from "@/schemas/CommandCard.ts"
+import Keyword from "@/schemas/Rule.ts"
+import * as Primitives from "@/schemas/primitives.ts"
+import Spell from "@/schemas/Spell.ts"
+import * as Units from "@/schemas/units.ts"
 import z from "zod"
 
-export type Abilities = z.infer<typeof Primitives.Abilities>
 export type Ability = z.infer<typeof Ability>
 export type Advantage = z.infer<typeof Advantage>
 export type Attachment = z.infer<typeof Units.Attachment>
@@ -29,5 +28,4 @@ export type Warcaster = z.infer<typeof Units.Warcaster>
 export type Warjack = z.infer<typeof Units.Warjack>
 export type Weapon = z.infer<typeof Primitives.Weapon>
 export type WeaponQuality = z.infer<typeof Primitives.WeaponQuality>
-export type Weapons = z.infer<typeof Primitives.Weapons>
 export type WeaponType = z.infer<typeof Primitives.WeaponType>

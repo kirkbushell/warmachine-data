@@ -2,24 +2,22 @@
 
 Community projects are nothing without a decent data source, and so this project aims to provide a database of
 warmachine data in a friendly JSON format that can be used in any community project. In order for such a project to be
-successful, it is important that the broader community is involved in keeping the data up-to-date, by writing
-changes and [submitting pull requests](https://github.com/kirkbushell/warmachine-data/pulls).
+successful, it is important that the broader community is involved in keeping the data up-to-date, by writing changes
+and [submitting pull requests](https://github.com/kirkbushell/warmachine-data/pulls).
 
 ## How to use this repository
 
 1. First, [fork the project](https://github.com/kirkbushell/warmachine-data/fork) and clone to your local machine
 2. Install all required dependencies by running: `npm install`
 3. Next, make any updates required to the necessary JSON files.
-4. Run the validation tool to ensure the data provided is valid (this will run automatically when you commit, but
-   it's a good practise to run this command regularly to ensure you haven't made any simple mistakes with the data
-   formats)
+4. Run the validation tool to ensure the data provided is valid (this will run automatically when you commit, but it's a
+   good practise to run this command regularly to ensure you haven't made any simple mistakes with the data formats)
 5. Commit your changes and open a pull request to this repository.
 6. Wait.
 
 *__Please note:__ I reserve the right to review and merge pull requests as timing, quality of the pull request and
 communication allows. In order for your pull request to be accepted and merged quickly, please ensure you follow the
-[data format standards](#data-format-standards) below, and make sure to use
-the [validate command](#validation).*
+[data format standards](#data-format-standards) below, and make sure to use the [validate command](#validation).*
 
 # Data format standards
 
@@ -43,7 +41,7 @@ All JSON files adhere to the following, simple structure:
 This is the core format of all files, with the two key requirements being an identifier as a property, and then an
 object representing 1 or more properties, with name being a required field of all entries.
 
-## References
+## Rule references
 
 Most entries have one or more references to other entries, such as rules, keywords, units, spells.etc. In order to
 ensure these references are available, the following syntax is required to be used when such keywords are present:
@@ -52,15 +50,15 @@ ensure these references are available, the following syntax is required to be us
 {
 	"specialOrders": {
 		"name": "Special Orders",
-		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {reposition-3} for one turn.",
+		"rules": "RNG 5. Target friendly Faction warrior model/unit. If the model/unit is in range, it gains {ability:reposition-3} for one turn.",
 		"type": "passive"
 	}
 }
 ```
 
-Here we see that the ability, "Special Orders" provides the Reposition ability to a target model/unit. A reference
-to reposition is therefore needed, and because the number of inches is an argument required by the ability, we use the
-syntax: {ability-value} to reference the ability and pass it the required value. If we then look at the Reposition
+Here we see that the ability, "Special Orders" provides the Reposition ability to a target model/unit. A reference to
+reposition is therefore needed, and because the number of inches is an argument required by the ability, we use the
+syntax: {reference-value} to reference the ability and pass it the required value. If we then look at the Reposition
 ability:
 
 ```
@@ -73,8 +71,8 @@ allows abilities to have 0 or more variables that it depends on to facilitate th
 
 ## Object schemas
 
-The project is dependent upon object schemas enforced by a library called [Zod](https://zod.dev/) for validation. As
-you might imagine, invalid data can make the project itself unreliable, and so it is important that the data format
+The project is dependent upon object schemas enforced by a library called [Zod](https://zod.dev/) for validation. As you
+might imagine, invalid data can make the project itself unreliable, and so it is important that the data format
 standards are upheld. To do this, object schemas are defined in src/schemas/* and are validated at build time, with each
 data file validated against those registered schemas.
 
@@ -102,10 +100,10 @@ npm run validate
 
 ## Builds
 
-The project builds an index.json file which is a reference to any entry within the dataset. Because all
-references must be unique, you can look up where a particular keyword or record may be found by first checking the
-built index.json file. Let's say for example we want to know which file the reference "fieldMarshal" is found. You can
-import the index.json file, and call the fieldMarshal property on that object:
+The project builds an index.json file which is a reference to any entry within the dataset. Because all references must
+be unique, you can look up where a particular keyword or record may be found by first checking the built index.json
+file. Let's say for example we want to know which file the reference "fieldMarshal" is found. You can import the
+index.json file, and call the fieldMarshal property on that object:
 
 ```typescript
 import index from "index.json"
@@ -137,11 +135,10 @@ always up-to-date with any changes made to the referenced JSON files.
 
 # JSON files
 
-There are many different JSON files that represent the various units, abilities, spells, weapon qualities.etc.
-within the game of Warmachine. Each entry in each of the files may reference one or more other files, due to
-keywords, abilities, weapons or spells (considering that many of these entries are not globally unique). This
-allows for de-duplication as well as a way to potentially see what units use the same weapon qualities, spells or
-any other data.
+There are many different JSON files that represent the various units, abilities, spells, weapon qualities.etc. within
+the game of Warmachine. Each entry in each of the files may reference one or more other files, due to keywords,
+abilities, weapons or spells (considering that many of these entries are not globally unique). This allows for
+de-duplication as well as a way to potentially see what units use the same weapon qualities, spells or any other data.
 
 ## Factions
 
@@ -151,13 +148,10 @@ However, should players wish to support Legacy, this could be managed through co
 updated to support the Legacy factions. If there is enough support, the project has been built in such a way to easily
 support that requirement, should it be needed.
 
-The various json files consists of all units within the game (Prime), as well as references to weapons.json, abilities.
-json and other files.
-
 ## Keywords
 
-Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These
-are covered within the keywords.json file.
+Warmachine makes use of a large number of keywords, both in regards to unit keywords as well as game terms. These are
+covered within the keywords.json file.
 
 # Utility functions
 
@@ -170,8 +164,8 @@ npm i -D warmachine-data
 
 ## entry
 
-The entry function is a low-level function where the required dataset must be known. Once provided, entry returns
-the full entry of the required record.
+The entry function is a low-level function where the required dataset must be known. Once provided, entry returns the
+full entry of the required record.
 
 ```typescript
 import {entry} from "warmachine-data"
@@ -195,8 +189,8 @@ or warlocks which use their character ID, ie. eviscerus1
 
 ## index
 
-Retrieve all entries from the index using this function. This will return an object of key->value pairs, where the
-key is the entry's ID, and the value is a reference to the dataset.
+Retrieve all entries from the index using this function. This will return an object of key->value pairs, where the key
+is the entry's ID, and the value is a reference to the dataset.
 
 ```typescript
 import {index} from "warmachine-data"

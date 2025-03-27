@@ -1,5 +1,15 @@
 import {z, ZodType} from "zod"
-import {Abilities, ModelAdvantage, Faction, Feat, Option, Points, Statistics, Weapons} from "./primitives"
+import {
+	Abilities,
+	Army,
+	ModelAdvantage,
+	Faction,
+	Feat,
+	Option,
+	Points,
+	Statistics,
+	Weapons,
+} from "@/schemas/primitives.ts"
 
 const Record = z.object({}).strict()
 
@@ -8,6 +18,7 @@ export const BaseUnit = Record.extend({
 	advantages: z.array(ModelAdvantage),
 	baseSize: z.number().positive(),
 	faction: Faction,
+	armies: z.array(Army),
 	fieldAllowance: z.union([z.number().positive(), z.literal('c')]),
 	keywords: z.array(z.string()),
 	name: z.string(),
@@ -34,7 +45,7 @@ export const Unit = BaseUnit.extend({
 })
 
 export const Warjack = BaseUnit.extend({
-	damageGrid: z.array(z.number()).length(6),
+	damageGrid: z.array(z.string().regex(/[1-6][1-6][CHLMRS]+/)).length(6),
 	options: z.record(z.string(), z.record(z.string(), Option)),
 })
 

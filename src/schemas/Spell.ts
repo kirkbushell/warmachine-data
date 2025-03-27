@@ -1,5 +1,5 @@
 import {z} from "zod"
-import {Range} from "./primitives"
+import {Range} from "@/schemas/primitives.ts"
 
 export default z.object({
 	name: z.string(),

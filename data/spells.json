@@ -79,7 +79,7 @@
 			"offensive": false,
 			"range": "self"
 		},
-		"rules": "The spellcaster and friendly Faction models beginning their activations in its control range gain {relentlessCharge} for one turn."
+		"rules": "The spellcaster and friendly Faction models beginning their activations in its control range gain {ability:relentlessCharge} for one turn."
 	},
 	"openFire": {
 		"name": "Open Fire",
