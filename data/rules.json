@@ -11,6 +11,10 @@
 		"name": "battlegroup",
 		"rules": "A warcaster and the warjacks they control and a warlock and the warbeasts they control are collectively referred to as battlegroups."
 	},
+	"battlegroupController": {
+		"name": "Battlegroup Controller",
+		"rules": "<todo>"
+	},
 	"blind": {
 		"name": "Blind",
 		"rules": "A model suffering Blind cannot make ranged or magic attacks, suffers -4 MAT and DEF, and cannot run, charge, or make slam or trample power attacks. It must forfeit either its Normal Movement or Combat Action during its next activation. Blind can be {rule:shaken}."
@@ -55,9 +59,13 @@
 		"name": "Engaged Attacker",
 		"rules": "A model {rule:engaged} by one or more enemy models can only make ranged attacks targeting enemy models {rule:engaging} it. Additionally, while {rule:engaged}, a model cannot gain the bonus for {rule:aim}ing."
 	},
-	"knockedDownTarget": {
-		"name": "Knocked Down Target",
-		"rules": "While knocked down, a model has its base DEF reduced to 5."
+	"knockedDown": {
+		"name": "Knocked Down",
+		"rules": "While knocked down, a model does not have a melee range and cannot advance, make special actions, make attacks, cast spells, use feats, or be used to channel a spell. A knocked down model does not engage other models and cannot be engaged by them. As a consequence, a model is never in melee with a knocked down model. A melee attack against a knocked down model automatically hits. A knocked down model has a base DEF of 5. A knocked down model does not block line of sight and is never an intervening model. A knocked down model can stand up at the start of its next activation. Knock down is not cumulative; a model cannot become knocked down while it is knocked down."
+	},
+	"removedFromPlay": {
+		"name": "Removed from Play",
+		"rules": "A model removed from play is taken off the table and set aside for the rest of the game; it cannot return to the game for any reason."
 	},
 	"shadowBind": {
 		"name": "Shadow Bind",
