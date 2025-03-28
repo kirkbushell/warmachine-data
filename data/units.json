@@ -607,5 +607,610 @@
             "speed": 7
         },
         "type": "warjack"
+    },
+    "diBaro1": {
+        "abilities": [
+            "defenseFormation",
+            "polarityField"
+        ],
+        "advantages": [
+            "dualAttack",
+            "resistanceElectricity"
+        ],
+        "armies": [
+            "stormLegion"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "weatheringTheStorm": {
+                "name": "Weathering the Storm",
+                "rules": "While in di Baro's control range, friendly models gain one additional dice on their attack rolls. When resolving a friendly model's roll, discard the lowest die rolled. While in di Baro's control range, enemy models gain one additional dice on their attack rolls and damage rolls. When resolving an enemy model's roll, discard the highest die roll. Wheathering the Storm lasts for one round."
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cygnar",
+            "scout",
+            "storm",
+            "legion",
+            "warcaster"
+        ],
+        "name": "Captain Athena di Baro",
+        "rackSlots": 2,
+        "spells": [
+            "avengingForce",
+            "openFire"
+        ],
+        "statistics": {
+            "arcana": 6,
+            "arcaneAttack": 6,
+            "armour": 17,
+            "controlRange": 14,
+            "defense": 14,
+            "health": 17,
+            "meleeAttack": 6,
+            "rangeAttack": 6,
+            "speed": 6
+        },
+        "type": "warcaster",
+        "weapons": {
+            "electricalDischarge": {
+                "abilities": [
+                    "criticalCortexDamage"
+                ],
+                "name": "Electrical Discharge",
+                "qualities": [
+                    "damageTypeElectricity",
+                    "pistol"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": "Spray 8",
+                    "rateOfFire": "1"
+                },
+                "type": "ranged"
+            },
+            "galvanicShield": {
+                "name": "Galvanic Shield",
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": 1
+                },
+                "type": "melee"
+            },
+            "lightningSpear": {
+                "abilities": [
+                    "criticalCortexDamage"
+                ],
+                "name": "Lightning Spear",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 14,
+                    "range": 2
+                },
+                "type": "melee"
+            }
+        }
+    },
+    "calder1": {
+        "abilities": [
+            "birdsEye",
+            "dodge",
+            "reposition-3"
+        ],
+        "advantages": [
+            "cavalry",
+            "dualAttack",
+            "pathfinder",
+            "resistanceElectricity",
+            "unstoppable"
+        ],
+        "armies": [
+            "stormLegion"
+        ],
+        "baseSize": 50,
+        "faction": "cygnar",
+        "feat": {
+            "rideTheStorm": {
+                "name": "Ride the Storm",
+                "rules": "While in Calder's control range, friendly Faction models gain +2 DEF. Additionally, while in her control range models in Calder's battlegroup gain {dodge} and {riposte}. (When a model with Riposte is missed by an enemy melee attack, immediately after the attack is resolved the model with Riposte can make one basic melee attack against the attacking model.)"
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cygnar",
+            "storm",
+            "legion",
+            "warcaster"
+        ],
+        "name": "Captain Madison Calder",
+        "rackSlots": 3,
+        "spells": [
+            "crusadersCall",
+            "rythmOfWar"
+        ],
+        "statistics": {
+            "arcana": 7,
+            "arcaneAttack": 6,
+            "armour": 17,
+            "controlRange": 14,
+            "defense": 15,
+            "health": 17,
+            "meleeAttack": 6,
+            "rangeAttack": 7,
+            "speed": 8
+        },
+        "type": "warcaster",
+        "weapons": {
+            "electroPulse": {
+                "name": "Electro Pulse",
+                "qualities": [
+                    "damageTypeElectricity",
+                    "pistol"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": 10,
+                    "rateOfFire": "1"
+                },
+                "type": "ranged"
+            },
+            "pulseSword": {
+                "abilities": [
+                    "brutalCharge",
+                    "criticalCortexDamage"
+                ],
+                "name": "Pulse Sword",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 14,
+                    "range": 1
+                },
+                "type": "melee"
+            }
+        }
+    },
+    "cyn1": {
+        "abilities": [
+            "arcanePrecision",
+            "oathOfVengeance-undead",
+            "runAndGun"
+        ],
+        "advantages": [
+            "dualAttack",
+            "pathfinder",
+            "tough"
+        ],
+        "armies": [
+            "gravediggers"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "firefight": {
+                "name": "Firefight",
+                "rules": "Cyn and models in her battlegroup beginning their activations in her control range can make one additional ranged or melee attack during their activations. Additionally, while in Cyn's control range, other friendly Faction models gain {swiftHunter}. Firefight lasts for one turn. (When a model with Swift Hunter destroys one or more enemy models with a basic ranged attack, immediately after the attack is resolved it can advance up to 2\".)"
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cygnar",
+            "gravediggers",
+            "gun",
+            "mage",
+            "scout",
+            "warcaster"
+        ],
+        "name": "Captain Cynthia Rosko",
+        "rackSlots": 2,
+        "spells": [
+            "admonition",
+            "curseOfShadows",
+            "shadowStep"
+        ],
+        "statistics": {
+            "arcana": 6,
+            "arcaneAttack": 7,
+            "armour": 15,
+            "controlRange": 12,
+            "defense": 15,
+            "health": 15,
+            "meleeAttack": 6,
+            "rangeAttack": 7,
+            "speed": 6
+        },
+        "type": "warcaster",
+        "weapons": {
+            "witchHammer": {
+                "abilities": [
+                    [
+                        "attackType",
+                        "bloodBoon",
+                        "brutalDamage",
+                        "crater"
+                    ]
+                ],
+                "name": "Witch Hammer",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "areaOfEffect": 2,
+                    "power": "13/8",
+                    "range": 13,
+                    "rateOfFire": "1"
+                },
+                "type": "ranged"
+            },
+            "trenchBlade": {
+                "abilities": [
+                    "brutalCharge"
+                ],
+                "name": "Trench Blade",
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": 1
+                },
+                "type": "melee"
+            }
+        }
+    },
+    "hasker1": {
+        "abilities": [
+            "fieldMarshal-prowl",
+            "killingSpree",
+            "prowl"
+        ],
+        "advantages": [
+            "dualAttack",
+            "pathfinder",
+            "tough",
+            "unstoppable"
+        ],
+        "armies": [
+            "gravediggers"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "minefield": {
+                "name": "Minefield",
+                "rules": "Place three tokens anywhere completely within Hasker's control range. Enemy models treat the area within 3\" of a mine token as rough terrain. When an enemy model enters, is placed or ends its activation within 3\" of a mine, roll a d6; on a result of 1-3 nothing happens, on a result of 4-6 the model suffers an unboostable POW 14 damage roll and is knocked down. Models disabled by mine tokens cannot make a Tough roll. Minefield lasts for one round. When Minefield expires, remove the mine tokens from play."
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cygnar",
+            "gravediggers",
+            "warcaster"
+        ],
+        "name": "Captain Buck Hasker",
+        "rackSlots": 2,
+        "spells": [
+            "cursedFate",
+            "escort",
+            "veilOfMist"
+        ],
+        "statistics": {
+            "arcana": 6,
+            "arcaneAttack": 6,
+            "armour": 16,
+            "controlRange": 12,
+            "defense": 15,
+            "health": 17,
+            "meleeAttack": 7,
+            "rangeAttack": 6,
+            "speed": 8
+        },
+        "type": "warcaster",
+        "weapons": {
+            "mechanikaGrenade": {
+                "abilities": [
+                    [
+                        "attackType",
+                        "arcaneInterference",
+                        "empoweredAttack",
+                        "kineticGrip"
+                    ]
+                ],
+                "name": "Mechanika Grenade",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "areaOfEffect": 2,
+                    "power": "14/8",
+                    "range": 6,
+                    "rateOfFire": "1"
+                },
+                "type": "ranged"
+            },
+            "handCannon": {
+                "abilities": [
+                    "reload-1"
+                ],
+                "name": "Pulse Sword",
+                "qualities": [
+                    "pistol"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": 12
+                },
+                "type": "ranged"
+            },
+            "fang": {
+                "abilities": [
+                    "grievousWounds"
+                ],
+                "name": "Fang",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 12,
+                    "range": 1
+                },
+                "type": "melee"
+            }
+        }
+    },
+    "Caine4": {
+        "abilities": [
+            "evasive",
+            "fieldMarshal-evasive",
+            "headShot",
+            "leadership-gunMage"
+        ],
+        "advantages": [
+            "pathfinder",
+            "gunfighter"
+        ],
+        "armies": [
+            "gravediggers",
+            "stormLegion"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "arcaneConflagration": {
+                "name": "Arcane Conflagration",
+                "rules": "While in Caine's control range friendly Faction warjack model's ranged weapons gain {quality:blessed}, {quality:damageTypeMagical} and +2 POW. When a friendly Faction model makes an attack with a waepon with Attack Types while in Caine's control range, that model can choose two special rules instead of one. Arcane Conflagration lasts for one turn."
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cadre",
+            "cygnar",
+            "gun",
+            "mage",
+            "hellslinger",
+            "warcaster"
+        ],
+        "name": "Major Allister Caine",
+        "rackSlots": 2,
+        "spells": [
+            "calamity",
+            "heightenedReflexes",
+            "teleport"
+        ],
+        "statistics": {
+            "arcana": 6,
+            "arcaneAttack": 6,
+            "armour": 13,
+            "controlRange": 12,
+            "defense": 17,
+            "health": 15,
+            "rangeAttack": 9,
+            "speed": 7
+        },
+        "type": "warcaster",
+        "weapons": {
+            "spellstormPistol": {
+                "abilities": [
+                    [
+                        "attackType",
+                        "heartSeeker",
+                        "thunderbolt",
+                        "witchMark"
+                    ],
+                    "reload-1"
+                ],
+                "name": "Spellstorm Pistol",
+                "qualities": [
+                    "damageTypeMagical",
+                    "pistol"
+                ],
+                "quantity": 2,
+                "statistics": {
+                    "power": 12,
+                    "range": 9,
+                    "rateOfFire": "1"
+                },
+                "type": "ranged"
+            }
+        }
+    },
+    "wolfe1": {
+        "abilities": [
+            "bloodQuenched",
+            "sideStep"
+        ],
+        "advantages": [
+            "resistanceElectricity"
+        ],
+        "armies": [
+            "stormLegion"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "giveEmHell": {
+                "name": "Give 'Em Hell!",
+                "rules": "When one or more friendly Faction models are destroyed while in Wolfe's control area by an enemy attack, immediatly after the attack is resolved one model in Wolfe's battlegroup currently in his control area can advance up to 2\" and make one basic attack. Give 'Em Hell! lasts for one round."
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cygnar",
+            "storm",
+            "legion",
+            "warcaster"
+        ],
+        "name": "Major Anson Wolfe",
+        "rackSlots": 3,
+        "spells": [
+            "energizer",
+            "positiveCharge"
+        ],
+        "statistics": {
+            "arcana": 7,
+            "arcaneAttack": 6,
+            "armour": 16,
+            "controlRange": 14,
+            "defense": 16,
+            "health": 16,
+            "meleeAttack": 8,
+            "speed": 6
+        },
+        "type": "warcaster",
+        "weapons": {
+            "galvanicSword": {
+                "abilities": [
+                    "electroLeap"
+                ],
+                "name": "Galvanic Sword",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 15,
+                    "range": 2
+                },
+                "type": "melee"
+            },
+            "voltaicHammer": {
+                "abilities": [
+                    "beatBack",
+                    "criticalThunderclap"
+                ],
+                "name": "Galvanic Sword",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 15,
+                    "range": 1
+                },
+                "type": "melee"
+            }
+        }
+    },
+    "sparkhammer1": {
+        "abilities": [
+            [
+                "arcaneMachinery",
+                "arcaneCalibration",
+                "ionizationCtrl",
+                "vexingAlignement"
+            ]
+        ],
+        "advantages": [
+            "dualAttack",
+            "resistanceElectricity"
+        ],
+        "armies": [
+            "gravediggers",
+            "stormLegion"
+        ],
+        "baseSize": 30,
+        "faction": "cygnar",
+        "feat": {
+            "cloudBurst": {
+                "name": "Cloud Burst",
+                "rules": "Sparkhammer gains the benefit of all of his {arcaneMachinery} effects this activation. Additionally, while in Sparkhammer's control range, friendly models can reroll {stormcall} attack and attack damage rolls. Each roll can be rerolled only once due to Cloud Burst. Cloud Burst lasts for one turn."
+            }
+        },
+        "fieldAllowance": "c",
+        "keywords": [
+            "cadre",
+            "cygnar",
+            "storm",
+            "forge",
+            "warcaster"
+        ],
+        "name": "Mechanik Adept Sparkhammer",
+        "rackSlots": 2,
+        "spells": [
+            "inhospitableGround",
+            "jackhammer",
+            "mobility",
+            "sunhammer"
+        ],
+        "statistics": {
+            "arcana": 7,
+            "arcaneAttack": 6,
+            "armour": 17,
+            "controlRange": 12,
+            "defense": 13,
+            "health": 17,
+            "meleeAttack": 7,
+            "rangeAttack": 6,
+            "speed": 5
+        },
+        "type": "warcaster",
+        "weapons": {
+            "lightningPulse": {
+                "abilities": [
+                    "stormcall",
+                    "criticalKnockdown"
+                ],
+                "name": "Lightning Pulse",
+                "qualities": [
+                    "damageTypeMagical",
+                    "damageTypeElectricity"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 14,
+                    "range": "controlRange",
+                    "rateOfFire": 1
+                },
+                "type": "ranged"
+            },
+            "maelstrom": {
+                "abilities": [
+                    "beatBack",
+                    "lightningGenerator"
+                ],
+                "name": "Maelstrom",
+                "qualities": [
+                    "damageTypeMagical"
+                ],
+                "quantity": 1,
+                "statistics": {
+                    "power": 14,
+                    "range": 2
+                },
+                "type": "melee"
+            }
+        }
     }
 }
