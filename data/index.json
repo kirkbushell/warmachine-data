@@ -139,8 +139,6 @@
     "cygnar:hasker1": "units/cygnar",
     "cygnar:sparkhammer1": "units/cygnar",
     "cygnar:wolfe1": "units/cygnar",
-    "faction:cryx": "factions",
-    "faction:cygnar": "factions",
     "quality:blessed": "qualities",
     "quality:buckler": "qualities",
     "quality:chainWeapon": "qualities",

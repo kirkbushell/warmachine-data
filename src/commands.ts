@@ -16,17 +16,47 @@ import Army from "@/schemas/Army.ts"
 import Faction from "@/schemas/Faction.ts"
 import {pathToFileURL} from "node:url"
 
-const schemas: { [key: string]: ZodType } = {
-	"abilities": Ability,
-	"armies": Army,
-	"advantages": Advantage,
-	"commands": CommandCard,
-	"factions": Faction,
-	"rules": Rule,
-	"qualities": Quality,
-	"spells": Spell,
-	"units/cryx": BaseUnit,
-	"units/cygnar": BaseUnit,
+const schemas: Record<string, { index: boolean, type: ZodType }> = {
+	"abilities": {
+		index: true,
+		type: Ability
+	},
+	"armies": {
+		index: true,
+		type: Army
+	},
+	"advantages": {
+		index: true,
+		type: Advantage
+	},
+	"commands": {
+		index: true,
+		type: CommandCard
+	},
+	"factions": {
+		index: false,
+		type: Faction
+	},
+	"rules": {
+		index: true,
+		type: Rule
+	},
+	"qualities": {
+		index: true,
+		type: Quality
+	},
+	"spells": {
+		index: true,
+		type: Spell
+	},
+	"units/cryx": {
+		index: true,
+		type: BaseUnit
+	},
+	"units/cygnar": {
+		index: true,
+		type: BaseUnit
+	},
 }
 
 const timer = async (command: () => Promise<any>) => {
@@ -78,6 +108,8 @@ const buildIndex = async (program: Command) => {
 	let map: { [key: string]: string } = {}
 	
 	for (const schema of Object.keys(schemas)) {
+		if (!schemas[schema].index) continue
+		
 		const module = await import(`../data/${schema}.json`)
 		
 		for (const entry of Object.keys(module.default)) {
@@ -122,6 +154,22 @@ const buildKeywords = async (program: Command) => {
 	writeToJSON('keywords.json', contents)
 }
 
+const buildUnits = async (program: Command) => {
+	const dirname = pathToFileURL(`${import.meta.dirname}/../data/units`)
+	
+	const modules = await fsPromises.readdir(dirname).then((files) => Promise.all(files.map(file => import(`${dirname}/${file}`))))
+	
+	let units = {}
+	
+	for (const json of modules) {
+		units = Object.assign(units, json.default)
+	}
+	
+	const contents = JSON.stringify(units, null, 4)
+	
+	writeToJSON('units.json', contents)
+}
+
 const writeToJSON = (file: string, contents: string) => {
 	const directory = process.cwd() + '/data'
 	
@@ -144,7 +192,8 @@ export const index = (program: Command) => async () => timer(async () => {
 	
 	await Promise.all([
 		buildIndex(program),
-		buildKeywords(program)
+		buildKeywords(program),
+		buildUnits(program),
 	])
 	
 	console.log(output.success('Done.'))
@@ -155,7 +204,7 @@ export const index = (program: Command) => async () => timer(async () => {
  * can determine a unit, then we'll use the returned Schema object, else we'll defer to Unit.
  */
 const parse = (schema: string, record: any): SafeParseReturnType<any, any> => {
-	const parser = schemas[schema] === BaseUnit ? unitSchema(record as { type: string }) : schemas[schema]
+	const parser = schemas[schema].type === BaseUnit ? unitSchema(record as { type: string }) : schemas[schema].type
 	
 	return parser.safeParse(record)
 }
@@ -174,8 +223,4 @@ const singular = (word: string) => {
 		new RegExp(`(${Object.keys(endings).join('|')})$`),
 		r => endings[r]
 	);
-}
-
-const ucfirst = (text: string): string => {
-	return text.charAt(0).toUpperCase() + text.slice(1);
 }

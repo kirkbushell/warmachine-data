@@ -19,10 +19,17 @@ export const dataKeys = async (dataset: string) => {
  * in the data/ folder, without the .json suffix. Eg. entry('ironLichCommander', 'cryx'). This should only be used
  * when you know exactly where an entry resides.
  */
-export const entry = async (keyword: string, dataset: string): Promise<Generic> => {
+export const entry = async (id: string, dataset: string): Promise<Generic> => {
 	const data = await file(`${dataset}.json`)
 	
-	return {...data[keyword], dataset: dataset, id: keyword};
+	// an id may consist of the following pattern: dataset:id. In order to facilitate that, we strip the first part of the string.
+	id = id.split(':').pop() as string
+	
+	if (!data[id]) {
+		throw new DatasetError(`Record not found for id ${id}`)
+	}
+	
+	return {...data[id], dataset: dataset, id: id};
 }
 
 /**
@@ -44,12 +51,12 @@ export const find = async (lookup: string) => {
 /**
  * Retrieves the index file's JSON object.
  */
-export const index = async (): Promise<Dataset> => (await file("index.json")).default
+export const index = async (): Promise<Dataset> => (await file("index.json"))
 
 /**
  * Retrieves a specific file from with the data folder.
  */
-export const file = async (file: string): Promise<Dataset> => await import(`../data/${file}`)
+export const file = async (file: string): Promise<Dataset> => (await import(`../data/${file}`)).default
 
 /**
  * Replaces any placeholder/variables within the provided text with their fulltext versions.
