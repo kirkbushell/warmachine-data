@@ -26,6 +26,7 @@ const schemas: { [key: string]: ZodType } = {
 	"qualities": Quality,
 	"spells": Spell,
 	"units/cryx": BaseUnit,
+	"units/cygnar": BaseUnit,
 }
 
 const timer = async (command: () => Promise<any>) => {

@@ -7,7 +7,7 @@
 			"power": "10/10",
 			"range": 10
 		},
-		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
+		"rules": "Center a {rule:cloudEffect} template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
 	},
 	"admonition": {
 		"name": "Admonition",
@@ -58,7 +58,7 @@
 			"power": 10,
 			"range": 10
 		},
-		"rules": "Center a cloud effect template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
+		"rules": "Center a {rule:cloudEffect} template on the model directly hit. The template is a hazard and remains in play as long as upkeep is paid. While in the template, enemy models suffer -2 ARM."
 	},
 	"crusadersCall": {
 		"name": "Crusader's Call",
@@ -120,7 +120,7 @@
 			"offensive": false,
 			"range": "self"
 		},
-		"rules": "Cohort models in the spellcaster's battlegroup beginning their activations in the spellcaster's control range gain +2 SPD when advancing as part of their Normal Movement. The spellcaster gains +2 ARM while one or more cohort models in its battlegroup are within 3\" of it."
+		"rules": "{rule:cohort} models in the spellcaster's battlegroup beginning their activations in the spellcaster's control range gain +2 SPD when advancing as part of their Normal Movement. The spellcaster gains +2 ARM while one or more cohort models in its battlegroup are within 3\" of it."
 	},
 	"heightenedReflexes": {
 		"name": "Heightened Reflexes",
@@ -189,7 +189,7 @@
 			"offensive": false,
 			"range": "controlRange"
 		},
-		"rules": "Target {cohort} model in this model's battlegroup that is in its control range can immediately make one basic range attack. A model can be targeted by Open Fire only once per turn."
+		"rules": "Target {rule:cohort} model in this model's battlegroup that is in its control range can immediately make one basic range attack. A model can be targeted by Open Fire only once per turn."
 	},
 	"positiveCharge": {
 		"name": "Positive Charge",
@@ -199,7 +199,7 @@
 			"offensive": false,
 			"range": 6
 		},
-		"rules": "Target friendly Faction {cohort} model gains +2 to melee attack and melee damage rolls. While within 3\" of the affected {cohort} model, other friendly Faction models gain +2 on melee attack and melee damage rolls. Positive Charge lasts for one turn."
+		"rules": "Target friendly Faction {rule:cohort} model gains +2 to melee attack and melee damage rolls. While within 3\" of the affected {rule:cohort} model, other friendly Faction models gain +2 on melee attack and melee damage rolls. Positive Charge lasts for one turn."
 	},
 	"redline": {
 		"name": "Redline",
@@ -231,7 +231,7 @@
 			"offensive": false,
 			"range": "self"
 		},
-		"rules": "While in the spellcaster's control range, models in its battlegroup gain Stealth and Dark Shroud. Shadowmancer lasts for one round."
+		"rules": "While in the spellcaster's control range, models in its battlegroup gain {advantage:stealth} and {rule:darkShroud}. Shadowmancer lasts for one round."
 	},
 	"shadowStep": {
 		"name": "Shadow Step",
@@ -241,7 +241,7 @@
 			"offensive": false,
 			"range": "self"
 		},
-		"rules": "Enemy models currently within 2\" of the spellcaster suffer {ability:shadowBind} for one round. Additionally, you can place the spellcaster anywhere completely within 3\" of its current location. Shadow Step can be cast only once per activation."
+		"rules": "Enemy models currently within 2\" of the spellcaster suffer {rule:shadowBind} for one round. Additionally, you can place the spellcaster anywhere completely within 3\" of its current location. Shadow Step can be cast only once per activation."
 	},
 	"Sunhammer": {
 		"name": "Sunhammer",
@@ -271,6 +271,6 @@
 			"offensive": false,
 			"range": "controlRange"
 		},
-		"rules": "Place a {cloudEffect} template anywhere completely within the spellcaster's control range. The template does not block friendly Faction models's LOS. While in the template, friendly Faction models gain {pathfinder} and can move through obstructions and other models if they have enough movement to move completely past them."
+		"rules": "Place a {rule:cloudEffect} template anywhere completely within the spellcaster's control range. The template does not block friendly Faction models's LOS. While in the template, friendly Faction models gain {pathfinder} and can move through obstructions and other models if they have enough movement to move completely past them."
 	}
 }

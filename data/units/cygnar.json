@@ -8,10 +8,11 @@
 			"dualAttack",
 			"resistanceElectricity"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Storm Legion"
+		"armies": [
+			"stormLegion"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"weatheringTheStorm": {
 				"name": "Weathering the Storm",
@@ -101,10 +102,11 @@
 			"resistanceElectricity",
             "unstoppable"
 		],
-		"baseSize": 50,
-		"factions": [
-			"Storm Legion"
+		"armies": [
+			"stormLegion"
 		],
+		"baseSize": 50,
+		"faction": "cygnar",
 		"feat": {
 			"rideTheStorm": {
 				"name": "Ride the Storm",
@@ -180,10 +182,11 @@
             "pathfinder",
 			"tough"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Gravediggers"
+		"armies": [
+			"gravediggers"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"firefight": {
 				"name": "Firefight",
@@ -267,10 +270,11 @@
             "tough",
             "unstoppable"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Gravediggers"
+		"armies": [
+			"gravediggers"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"minefield": {
 				"name": "Minefield",
@@ -368,11 +372,12 @@
             "pathfinder",
 			"gunfighter"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Storm Legion",
-			"Gravediggers"
+		"armies": [
+			"gravediggers",
+			"stormLegion"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"arcaneConflagration": {
 				"name": "Arcane Conflagration",
@@ -440,10 +445,11 @@
 		"advantages": [
             "resistanceElectricity"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Storm Legion"
+		"armies": [
+			"stormLegion"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"giveEmHell": {
 				"name": "Give 'Em Hell!",
@@ -521,11 +527,12 @@
             "dualAttack",
             "resistanceElectricity"
 		],
-		"baseSize": 30,
-		"factions": [
-			"Storm Legion",
-			"Gravediggers"
+		"armies": [
+			"gravediggers",
+			"stormLegion"
 		],
+		"baseSize": 30,
+		"faction": "cygnar",
 		"feat": {
 			"cloudBurst": {
 				"name": "Cloud Burst",

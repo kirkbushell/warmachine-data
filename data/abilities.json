@@ -1,12 +1,12 @@
 {
 	"acidBlast": {
 		"name": "Acid Blast",
-		"rules": "When this model is destroyed, models within 2\" of it suffer a POW 12 corrosion damage roll and the corrosion continuous effect.",
+		"rules": "When this model is destroyed, models within 2\" of it suffer a POW 12 corrosion damage roll and the {quality:continuousEffectCorrosion}.",
 		"type": "passive"
 	},
 	"acidicMist": {
 		"name": "Acidic Mist",
-		"rules": "This model has concealment. Living enemy models without Resistance: Corrosion suffer -2 to attack rolls while within 2\" of this model.",
+		"rules": "This model has concealment. Living enemy models without {advantage:resistanceCorrosion} suffer -2 to attack rolls while within 2\" of this model.",
 		"type": "passive"
 	},
 	"annihilator": {
@@ -36,7 +36,7 @@
 	},
 	"arcanePrecision": {
 		"name": "Arcane Precision",
-		"rules": "If this model uses its Normal Movement to aim, it ignores {cloudEffect} when determining LOS and ignores {stealth} that activation.",
+		"rules": "If this model uses its Normal Movement to aim, it ignores {rule:cloudEffect} when determining LOS and ignores {advantage:stealth} that activation.",
 		"type": "passive"
 	},
 	"attackType": {
@@ -61,12 +61,12 @@
 	},
 	"birdsEye": {
 		"name": "Birds Eye",
-		"rules": "While in this model's control range, models in its battlegroup can ignore {cloudEffect}, forest terrain and intervening models when determining LOS.",
+		"rules": "While in this model's control range, models in its battlegroup can ignore {rule:cloudEffect}, forest terrain and intervening models when determining LOS.",
 		"type": "passive"
 	},
 	"blackMantle": {
 		"name": "Black Mantle",
-		"rules": "While B2B with a model with Black Mantle, friendly Faction models gain {stealth}.",
+		"rules": "While B2B with a model with Black Mantle, friendly Faction models gain {advantage:stealth}.",
 		"type": "attack"
 	},
 	"bloodBoon": {
@@ -124,11 +124,6 @@
 		"rules": "When this model hits an enemy warjack that has a non-crippled cortex with a basic melee attack made with this weapon during this model's activation, you can take control of the warjack. Immediately after the attack has been resolved, you can make a full advance with the warjack and can then make one basic attack, then Dark Domination expires. A warjack can be affected by Dark Domination only once per turn.",
 		"type": "weapon"
 	},
-	"darkShroud": {
-		"name": "Dark Shroud",
-		"rules": "While within 2\" of a model with Dark Shroud, enemy models suffer -2 ARM.",
-		"type": "passive"
-	},
 	"deathToll": {
 		"name": "Death Toll [Mechanithrall]",
 		"rules": "When this weapon boxes a living enemy warrior model, remove that model from play and return one Grunt to a small-based Mechanithrall unit within 8\" of this model. Place the Grunt with 2\" of another model in that unit. The Grunt must forfeit its Normal Movement and Combat Action the turn it is put into play.",
@@ -181,7 +176,7 @@
 	},
 	"fieldMarshal": {
 		"name": "Field Marshal [$1]",
-		"rules": "Cohort models in this model's battlegroup gain [$1].",
+		"rules": "{rule:cohort} models in this model's battlegroup gain $1.",
 		"type": "passive"
 	},
 	"gang": {
@@ -226,17 +221,17 @@
 	},
 	"invocationOfBitterestNight": {
 		"name": "Invocation of Bitterest Night",
-		"rules": "This model gains {stealth} and {ability:blackMantle} for one round.",
+		"rules": "This model gains {advantage:stealth} and {ability:blackMantle} for one round.",
 		"type": "action"
 	},
 	"ionizationCtrl": {
 		"name": "Ionization [CTRL]",
-		"rules": "When a model without {resistanceElectricity} suffers an electrical damage roll while within this model's control range of this model, add +2 to the roll.",
+		"rules": "When a model without {advantage:resistanceElectricity} suffers an electrical damage roll while within this model's control range of this model, add +2 to the roll.",
 		"type": "passive"
 	},
 	"ionizationRng": {
 		"name": "Ionization [$1]",
-		"rules": "When a model without {resistanceElectricity} suffers an electrical damage roll while within [$1]\" of this model, add +2 to the roll.",
+		"rules": "When a model without {advantage:resistanceElectricity} suffers an electrical damage roll while within $1\" of this model, add +2 to the roll.",
 		"type": "passive"
 	},
 	"ironHorse": {
@@ -261,7 +256,7 @@
 	},
 	"leadership": {
 		"name": "Leadership-[$1]",
-		"rules": "While within 10\" of this model, friendly [$1] models gain {ability:headShot}.",
+		"rules": "While within 10\" of this model, friendly $1 models gain {ability:headShot}.",
 		"type": "weapon"
 	},
 	"lifeDrinker": {
@@ -286,7 +281,7 @@
 	},
 	"oathOfVengeance": {
 		"name": "Oath of Vengeance [$1]",
-		"rules": "This model gains +2 to its attack and damage rolls against [$1] models.",
+		"rules": "This model gains +2 to its attack and damage rolls against $1 models.",
 		"type": "passive"
 	},
 	"polarityField": {
@@ -306,7 +301,7 @@
 	},
 	"prowl": {
 		"name": "Prowl",
-		"rules": "While this model has {concealment}, it gains {stealth}.",
+		"rules": "While this model has {concealment}, it gains {advantage:stealth}.",
 		"type": "passive"
 	},
 	"relentlessCharge": {
@@ -332,7 +327,7 @@
 	},
 	"reposition": {
 		"name": "Reposition [$1\"]",
-		"rules": "At the end of a model/unit with Reposition [$\"]'s activation, it can advance up to $\", then its activation ends.",
+		"rules": "At the end of a model/unit's activation in which it did not run or fail a charge, this model can advance up to $1\", then its activation ends.",
 		"type": "passive"
 	},
 	"retaliatoryStrike": {
@@ -348,11 +343,6 @@
 	"runAndGun": {
 		"name": "Run & Gun",
 		"rules": "At the end of its activation, if this model destroyed one or more enemy models with ranged attacks that activation, it can make a full advance.",
-		"type": "passive"
-	},
-	"shadowBind": {
-		"name": "Shadow Bind",
-		"rules": "A model suffering Shadow Bind suffers -3 DEF and cannot advance for one round. Shadow Bind can be shaken.",
 		"type": "passive"
 	},
 	"sideStep": {
@@ -382,7 +372,7 @@
 	},
 	"stormcall": {
 		"name": "Stormcall",
-		"rules": "Attacks made with this weapon ignore {concealement}, {cover}, {elevationBonus} and {stealth}",
+		"rules": "Attacks made with this weapon ignore {rule:concealement}, {rule:cover}, {rule:elevationBonus} and {advantage:stealth}",
 		"type": "weapon"
 	},
 	"strengthOfDeath": {
