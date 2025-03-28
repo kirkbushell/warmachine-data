@@ -1,14 +1,20 @@
 [
     "cryx",
-    "cygnar",
-    "gravediggers",
     "necrofactorium",
     "warcaster",
     "scout",
     "solo",
-    "stormLegion",
     "thrall",
     "unit",
     "light",
-    "warjack"
+    "warjack",
+    "cadre",
+    "cygnar",
+    "gun",
+    "mage",
+    "hellslinger",
+    "storm",
+    "legion",
+    "gravediggers",
+    "forge"
 ]
