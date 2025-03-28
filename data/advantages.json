@@ -45,7 +45,7 @@
 	},
 	"eyelessSight": {
 		"name": "Eyeless Sight",
-		"rules": "This model ignores cloud effects when determining line of sight. This model ignores concealment and {advantage:stealth} and never suffers Blind."
+		"rules": "This model ignores {rule:cloudEffect} when determining line of sight. This model ignores concealment and {advantage:stealth} and never suffers Blind."
 	},
 	"flight": {
 		"name": "Flight",
@@ -54,6 +54,10 @@
 	"gladiator": {
 		"name": "Gladiator",
 		"rules": "This model gains +2 on power attack damage rolls and on power attack collateral damage rolls."
+	},
+	"gunfighter": {
+		"name": "Gunfighter",
+		"rules": "When this model makes a ranged attack while engaged, it does not have to target the model engaging it with the attack."
 	},
 	"headbuttPowerAttack": {
 		"name": "Headbutt Power Attack",
@@ -66,6 +70,14 @@
 	"pathfinder": {
 		"name": "Pathfinder",
 		"rules": "This model treats rough terrain as open terrain while advancing. While charging, slam power attacking, or trample power attacking, this model does not stop its movement when it contacts an obstacle."
+	},
+	"resistanceCorrosion": {
+		"name": "Resistance: Corrosion",
+		"rules": "When this model suffers a corrosion damage roll, remove one die from the damage roll. Additionally, this models is immune to the Corrosion continuous effect and \"{quality:continuousEffectCorrosion}\"."
+	},
+	"resistanceElectricity": {
+		"name": "Resistance: Electricity",
+		"rules": "When this model suffers an electrical damage roll, remove one die from the damage roll. Additionally, when lightning arcs as a result of a special rule, ignore models with Resistance: Electricity when determining which model the lightning arcs to. Lightning cannot arc from a model with Resistance: Electricity."
 	},
 	"slamPowerAttack": {
 		"name": "Slam Power Attack",

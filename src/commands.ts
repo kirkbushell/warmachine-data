@@ -53,6 +53,10 @@ const schemas: Record<string, { index: boolean, type: ZodType }> = {
 		index: true,
 		type: BaseUnit
 	},
+	"units/cygnar": {
+		index: true,
+		type: BaseUnit
+	},
 }
 
 const timer = async (command: () => Promise<any>) => {

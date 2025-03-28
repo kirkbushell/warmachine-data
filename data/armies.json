@@ -2,5 +2,13 @@
 	"necrofactorium": {
 		"faction": "cryx",
 		"name": "Necrofactorium"
+	},
+	"stormLegion": {
+		"faction": "cygnar",
+		"name": "Storm Legion"
+	},
+	"gravediggers": {
+		"faction": "cygnar",
+		"name": "Gravediggers"
 	}
 }

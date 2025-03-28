@@ -39,6 +39,11 @@
 		"name": "Critical Hit",
 		"rules": "If an attack directly hits and any two dice in the attack roll show the same number, it is a critical hit."
 	},
+	"darkShroud": {
+		"name": "Dark Shroud",
+		"rules": "While within 2\" of a model with Dark Shroud, enemy models suffer -2 ARM.",
+		"type": "passive"
+	},
 	"elevationBonus": {
 		"name": "Elevation Bonus",
 		"rules": "A large or smaller-based elevated model gains +2 DEF against ranged and arcane attack rolls made by models on lower elevations. Extra-large and huge-based models never gain the DEF bonus from elevation."

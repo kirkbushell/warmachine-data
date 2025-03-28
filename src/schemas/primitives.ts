@@ -18,7 +18,7 @@ export const Feat = z.record(z.string(), z.object({
 }))
 
 export const Points = z.number().positive()
-export const Range = z.union([z.number().positive(), z.literal("self")])
+export const Range = z.union([z.number().positive(), z.literal("self"), z.literal("controlRange")])
 export const WeaponQuality = await dataKeys('qualities')
 
 export const WeaponType = z.enum([
@@ -32,9 +32,9 @@ export const Weapon = z.object({
 	qualities: z.array(WeaponQuality).optional(),
 	quantity: z.number().positive(),
 	statistics: z.object({
-		range: z.union([z.number(), z.string().regex(new RegExp("^Spray [0-9]+$"))]),
+		range: z.union([z.number(), z.string().regex(new RegExp("^Spray [0-9]+$")), z.literal("controlRange")]),
 		rateOfFire: z.union([z.number(), z.string().optional()]),
-		power: z.number(),
+		power: z.union([z.number(), z.string().regex(new RegExp("^[0-9]+\/[0-9]+$"))]),
 	}),
 	type: WeaponType,
 })
